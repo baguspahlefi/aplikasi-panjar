@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/css/style.css">
+    <link rel="stylesheet" href="style/bootstrap/bootstrap.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/LOGO-removebg-preview.png">
+    <title>Form input Panjar</title>
+</head>
+
+<body>
+    <!-- Navbar  -->
+    <nav class="navbar navbar-expand-lg ms-auto position-fixed w-100" style="background-color: #18C3FF;" >
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="d-flex">
+                    <img src="images/LOGO-removebg-preview.png" alt="" width="60" srcset="">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h2 class="text-dark">Aplikasi Panjar</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p style="font-size: 10px; color: black;">PENGADILAN TATA USAHA BANDAR LAMPUNG</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+            data-bs-toggle="offcanvas" 
+            data-bs-target="#navbarOffcanvas"
+            aria-controls="navbarOffcanvas"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="offcanvas offcanvas-end" id="navbarOffcanvas" tabindex="-1" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header bg-dark">
+                    <a href="#" style="text-decoration: none;"><h5 class="offcanvas-title text-light" id="offcanvasNavbarLabel">Panjar</h5></a>
+                    <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body bg-transparent" id="isi-nav">          
+                    <div class="navbar-nav justify-content-end flex-grow-1 ">
+                        <a class="nav-link mx-2" aria-current="page" href="#">Beranda</a>
+                        <a class="nav-link mx-2" href="#">Tentang</a>
+                        <a class="nav-link mx-2 nav-masuk " href="#">Login</a>
+                        <a class="nav-link nav-daftar mx-2" href="#">Daftar</a>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </nav>
+
+    <!-- Section input  -->
+    <section id="form-input">
+        <div class="container w-100">
+            <div class="row my-4">
+                <div class="col-12 text-center">
+                    <h3 class="text-dark">
+                        Form Pengajuan Panjar
+                    </h3>
+                </div>
+            </div>
+            <div class="row h-100 ">
+                <div class="col-md-4 my-auto">
+                    <div class="mb-3 mt-4">
+                        <label for="exampleFormControlInput1" class="form-label text-dark">Nama Lengkap</label>
+                        <input type="form-control" class="form-control" id="exampleFormControlInput1" placeholder="Nama Lengkap">
+                    </div>
+                </div>
+                <div class="col-md-4 my-auto">
+                    <div class="mb-3 mt-4">
+                        <label for="exampleFormControlInput1" class="form-label text-dark">No Telepon</label>
+                        <input type="form-control" class="form-control" id="exampleFormControlInput1" placeholder="No Telepon">
+                    </div>
+                </div>
+                <div class="col-md-4 my-auto">
+                    <div class="mb-3 mt-4">
+                        <label for="exampleFormControlInput1" class="form-label text-dark">Email</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
+                    </div>
+                </div>
+                <div class="col-md-4 my-auto">
+                    <div class="mb-3 mt-4">
+                        <label for="exampleFormControlInput1" class="form-label text-dark">Nomor Perkara</label>
+                        <input type="form-control" class="form-control" id="exampleFormControlInput1" placeholder="Nomor Perkara">
+                    </div>
+                </div>
+                <div class="col-md-4 my-auto">
+                    <div class="mb-3 mt-4">
+                        <label for="exampleFormControlInput1" class="form-label text-dark">Nomor Rekening</label>
+                        <input type="form-control" class="form-control" id="exampleFormControlInput1" placeholder="Nomor Rekening">
+                    </div>
+                </div>
+                <div class="col-md-4 my-auto">
+                    <div class="mb-3 mt-4">
+                        <label for="exampleFormControlInput1" class="form-label text-dark">Upload KTP</label>
+                        <div class="input-group mb-3">
+                            <input type="file" class="form-control" id="inputGroupFile02">
+                          </div>
+                    </div>
+                </div>
+                <div class="col-md-4 my-auto">
+                    <div class="mb-3 mt-4">
+                        <label for="exampleFormControlInput1" class="form-label text-dark">Upload KTA</label>
+                        <div class="input-group mb-3">
+                            <input type="file" class="form-control" id="inputGroupFile02">
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 d-flex justify-content-end">
+                    <button class="btn btn-light mx-4">Kembali</button>
+                    <button class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+
+
+  <!-- Footer Section -->
+  <footer
+  class="text-center text-lg-start text-dark"
+  style="background-color: #ECEFF1"
+  >
+  <!-- Section: Social media -->
+  <section
+      class="d-flex justify-content-between p-4 text-white"
+      style="background-color: #18C3FF"
+      >
+  <!-- Left -->
+  <div class="me-5">
+  <span>Get connected with us on social networks:</span>
+  </div>
+  <!-- Left -->
+
+  <!-- Right -->
+  <div>
+  <a href="" class="text-white me-4">
+  <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="" class="text-white me-4">
+  <i class="fab fa-twitter"></i>
+  </a>
+  <a href="" class="text-white me-4">
+  <i class="fab fa-google"></i>
+  </a>
+  <a href="" class="text-white me-4">
+  <i class="fab fa-instagram"></i>
+  </a>
+  <a href="" class="text-white me-4">
+  <i class="fab fa-linkedin"></i>
+  </a>
+  <a href="" class="text-white me-4">
+  <i class="fab fa-github"></i>
+  </a>
+  </div>
+  <!-- Right -->
+  </section> 
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section>
+      <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase text-dark fw-bold">Aplikasi Panjar</h6>
+          <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #7c4dff; height: 2px"
+              />
+          <p style="color: #3d4444;">
+          Here you can use rows and columns to organize your footer
+          content. Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit.
+          </p>
+      </div>
+      <!-- Grid column -->
+
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold text-dark">Contact</h6>
+          <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #7c4dff; height: 2px"
+              />
+          <p style="color: #3d4444;"><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+          <p style="color: #3d4444;"><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+          <p style="color: #3d4444;"><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+      </div>
+      <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+      </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div
+      class="text-center text-dark p-3"
+      style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2023 Copyright:
+      <a class="text-dark text-decoration-none" href="#">aplikasi-panjar.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+
+
+
+               
+
+
+    
+    
+<script src="scirpt/js/bootstrap.js"></script>
+<script type="text/javascript">
+    var nav = document.querySelector('nav');
+    var isi_nav = document.getElementById("isi-nav")
+
+    window.addEventListener('scroll', function () {
+      if (window.pageYOffset > 50) {
+        nav.classList.add('bg-light', 'shadow'),
+        isi_nav.classList.add('bg-light');
+      } else {
+        nav.classList.remove('bg-light', 'shadow'),
+        isi_nav.classList.remove('bg-light');
+      }
+    });
+  </script>
+
+</body>
+</html>
