@@ -1,0 +1,51 @@
+* {
+  color: white;
+  z-index: 2;
+}
+
+body {
+  width: 100%;
+}
+
+nav {
+  z-index: 4;
+  font-size: 20px;
+}
+nav h6 {
+  font-size: 20px;
+}
+
+#hero {
+  background-color: #18C3FF;
+  padding-top: 10vh;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+}
+#hero .hero-container {
+  margin-top: 20vh;
+}
+#hero .hero-image {
+  z-index: 0;
+}
+#hero h4 {
+  margin-top: 8vh;
+}
+#hero .btn-panjar {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #315AE9;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+#tentang {
+  color: black;
+  background-color: #F8F4FC;
+}
+#tentang h4 {
+  margin-top: 10vh;
+}/*# sourceMappingURL=style.css.map */

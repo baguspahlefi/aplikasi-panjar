@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/css/style.css">
+    <link rel="stylesheet" href="style/bootstrap/bootstrap.css">
+    <title>Aplikasi Panjar</title>
+</head>
+<body>
+    <!-- Navbar  -->
+    <nav class="navbar navbar-expand-lg ms-auto position-fixed w-100" >
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="d-flex">
+                    <img src="images/LOGO-removebg-preview.png" alt="" width="60" srcset="">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h2 class="text-dark">Aplikasi Panjar</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p style="font-size: 10px; color: black;">PENGADILAN TATA USAHA BANDAR LAMPUNG</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+            data-bs-toggle="offcanvas" 
+            data-bs-target="#navbarOffcanvas"
+            aria-controls="navbarOffcanvas"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="offcanvas offcanvas-end" id="navbarOffcanvas" tabindex="-1" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header bg-dark">
+                    <a href="#" style="text-decoration: none;"><h5 class="offcanvas-title text-light" id="offcanvasNavbarLabel">Panjar</h5></a>
+                    <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" id="isi-nav">          
+                    <div class="navbar-nav justify-content-end flex-grow-1 ">
+                        <a class="nav-link mx-2" aria-current="page" href="#">Beranda</a>
+                        <a class="nav-link mx-2" href="#">Tentang</a>
+                        <a class="nav-link mx-2 nav-masuk " href="#">Login</a>
+                        <a class="nav-link nav-daftar mx-2" href="#">Daftar</a>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </nav>
+
+    <!-- Hero Section  -->
+    <section id="hero">
+        <div class="container hero-container w-100">
+            <div class="row h-100 ">
+                <div class="col-md-6 my-auto">
+                    <h2 class="hero">
+                        Simplifikasi Pengembalian dan Pemantauan Panjar pada Pengadilan Tata Usaha Bandar Lampung
+                    </h2>
+                    <h4 class="font-weight-normal">
+                        In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
+                        used to demonstrate the visual form of a 
+                    </h4>
+                    <a href="#">
+                        <button class="btn btn-panjar">Ajukan Panjar</button>
+                        <button class="btn btn-panjar mx-4">Pantau Panjar</button>
+                    </a>
+                </div>
+            </div>
+
+            <img src="images/Home.png" class="hero-image position-absolute end-0 bottom-0" width="400" alt="">
+        </div>
+    </section>
+
+      <!-- Tentang Section -->
+      <section id="tentang">
+        <div class="container-fluid w-100">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h3 class="text-dark">Tentang Panjar</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12 text-dark">
+                    <h2 style="width: 80%;" class="">
+                        Better Solutions For 
+                        Your Business
+                    </h2>
+
+                    <h4 class="font-weight-normal ">
+                        In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
+                        used to demonstrate the visual form of a 
+                    </h4>
+
+                </div>
+                <div class="col-md-6">
+                    <img src="images/Home.png" width="40" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+               
+
+
+    
+    
+<script src="scirpt/js/bootstrap.js"></script>
+<script type="text/javascript">
+    var nav = document.querySelector('nav');
+    var isi_nav = document.getElementById("isi-nav")
+
+    window.addEventListener('scroll', function () {
+      if (window.pageYOffset > 50) {
+        nav.classList.add('bg-light', 'shadow'),
+        isi_nav.classList.add('bg-light');
+      } else {
+        nav.classList.remove('bg-light', 'shadow'),
+        isi_nav.classList.remove('bg-light');
+      }
+    });
+  </script>
+
+</body>
+</html>
