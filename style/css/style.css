@@ -2,9 +2,7 @@
   color: white;
   z-index: 2;
 }
-a{
-  text-decoration: none;
-}
+
 body {
   width: 100%;
 }
@@ -44,24 +42,17 @@ nav h6 {
   margin-bottom: 10vh;
 }
 
-#tentang {
+#tentang-section {
   color: black;
   background-color: #F8F4FC;
-}
-#tentang h4 {
-  margin-top: 10vh;
-}
-.tentang-section{
-  padding-top: 20vh;
+  padding-top: 15vh;
   padding-bottom: 20vh;
 }
-
-
-/* Form input */
-#form-input {
-  background-color: #ffff;
-  padding-top: 20vh;
-  width: 100%;
-  margin-bottom: 25vh;
+#tentang-section h4 {
+  margin-top: 10vh;
 }
-/*# sourceMappingURL=style.css.map */
+
+#form-input {
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+}/*# sourceMappingURL=style.css.map */
