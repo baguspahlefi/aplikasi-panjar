@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/css/style.css">
     <link rel="stylesheet" href="style/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="style/datatables/datatables.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/LOGO-removebg-preview.png">
     <title>Form input Panjar</title>
 </head>
@@ -58,69 +59,35 @@
     </nav>
 
     <!-- Section input  -->
-    <section id="form-input">
-        <div class="container w-100">
+    <section id="pantau-panjar">
+        <div class="container">
             <div class="row my-4">
-                <div class="col-12 text-center">
-                    <h3 class="text-dark">
-                        Form Pengajuan Panjar
-                    </h3>
+                <div class="col-12">
+                    <h2 class="text-dark">
+                        Data Pengajuan Perkara
+                    </h2>
                 </div>
             </div>
-            <div class="row h-100 ">
-                <div class="col-md-4 my-auto">
-                    <div class="mb-3 mt-4">
-                        <label for="exampleFormControlInput1" class="form-label text-dark">Nama Lengkap</label>
-                        <input type="form-control" class="form-control" id="exampleFormControlInput1" placeholder="Nama Lengkap">
-                    </div>
-                </div>
-                <div class="col-md-4 my-auto">
-                    <div class="mb-3 mt-4">
-                        <label for="exampleFormControlInput1" class="form-label text-dark">No Telepon</label>
-                        <input type="form-control" class="form-control" id="exampleFormControlInput1" placeholder="No Telepon">
-                    </div>
-                </div>
-                <div class="col-md-4 my-auto">
-                    <div class="mb-3 mt-4">
-                        <label for="exampleFormControlInput1" class="form-label text-dark">Email</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
-                    </div>
-                </div>
-                <div class="col-md-4 my-auto">
-                    <div class="mb-3 mt-4">
-                        <label for="exampleFormControlInput1" class="form-label text-dark">Nomor Perkara</label>
-                        <input type="form-control" class="form-control" id="exampleFormControlInput1" placeholder="Nomor Perkara">
-                    </div>
-                </div>
-                <div class="col-md-4 my-auto">
-                    <div class="mb-3 mt-4">
-                        <label for="exampleFormControlInput1" class="form-label text-dark">Nomor Rekening</label>
-                        <input type="form-control" class="form-control" id="exampleFormControlInput1" placeholder="Nomor Rekening">
-                    </div>
-                </div>
-                <div class="col-md-4 my-auto">
-                    <div class="mb-3 mt-4">
-                        <label for="exampleFormControlInput1" class="form-label text-dark">Upload KTP</label>
-                        <div class="input-group mb-3">
-                            <input type="file" class="form-control" id="inputGroupFile02">
-                          </div>
-                    </div>
-                </div>
-                <div class="col-md-4 my-auto">
-                    <div class="mb-3 mt-4">
-                        <label for="exampleFormControlInput1" class="form-label text-dark">Upload KTA</label>
-                        <div class="input-group mb-3">
-                            <input type="file" class="form-control" id="inputGroupFile02">
-                          </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-12 d-flex justify-content-end">
-                    <a href="index.html">
-                        <button class="btn btn-light mx-4">Kembali</button>
-                    </a>
-                    <button class="btn btn-primary">Submit</button>
+            <div class="row">
+                <div class="col-12">
+                    <table id="table_id" class="table">
+                        <thead>
+                            <tr>
+                                <th>Column 1</th>
+                                <th>Column 2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Row 1 Data 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Row 2 Data 2</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -131,7 +98,7 @@
 
 
   <!-- Footer Section -->
-  <footer
+<footer
   class="text-center text-lg-start text-dark"
   style="background-color: #ECEFF1"
   >
@@ -227,10 +194,18 @@
 
                
 
-
+<script>
+    $(document).ready( function () {
+    $('#table_id').DataTable();
+} );
+</script>
     
-    
+<script src="scirpt/jquery-3.6.3.min.js"></script>
 <script src="scirpt/js/bootstrap.js"></script>
+<script src="scirpt/datatables/datatables.min.js"></script>
+
+
+
 <script type="text/javascript">
     var nav = document.querySelector('nav');
     var isi_nav = document.getElementById("isi-nav")

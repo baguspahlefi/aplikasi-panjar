@@ -55,4 +55,12 @@ nav h6 {
 #form-input {
   margin-top: 20vh;
   margin-bottom: 20vh;
+}
+
+#pantau-panjar {
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+}
+#pantau-panjar .container {
+  background-color: #F3F3F3;
 }/*# sourceMappingURL=style.css.map */
