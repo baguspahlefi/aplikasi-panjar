@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style/css/style.css">
     <link rel="stylesheet" href="style/bootstrap/bootstrap.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/LOGO-removebg-preview.png">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.13.2/datatables.min.css"/>
     <title>Form input Panjar</title>
 </head>
 
@@ -64,50 +63,63 @@
             <div class="row my-4">
                 <div class="col-12">
                     <h2 class="text-dark">
-                        Data Pengajuan Perkara
+                        Progress Detail Perkara
                     </h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12" style="overflow-x: auto;">
-                    <table class="table">
-                      <tr>
-                        <th>No</th>
-                        <th class="col text-center">Nomor Perkara</th>
-                        <th class="col text-center">Tanggal</th>
-                        <th class="col text-center">Penggugat</th>
-                        <th class="col text-center">Tergugat</th>
-                        <th class="col text-center">Status Perkara</th>
-                        <th class="col text-center">Detail</th>
+                    <table class="table table-bordered border-primary">
+                        <tr>
+                          <th>No</th>
+                          <th class="col text-center">Nomor Perkara</th>
+                          <th class="col text-center">Tanggal</th>
+                          <th class="col text-center">Penggugat</th>
+                          <th class="col text-center">Tergugat</th>
+                          <th class="col text-center">Status Perkara</th>
+                        </tr>
+                        <tr>
+                          <td class="text-center">1</td>
+                          <td class="text-center">1/G/2023/PTUN.BL</td>
+                          <td class="text-center">17 Januari 2022</td>
+                          <td class="text-center">Zaenal Abidin</td>
+                          <td class="text-center">Kantor Badan Pertanahan Nasional (BPN) Kabupaten Pesawaran </td>
+                          <td class="text-center">Pemeriksaan Perkara</td>
                       </tr>
-                      <tr>
-                        <td class="text-center">1</td>
-                        <td class="text-center">1/G/2023/PTUN.BL</td>
-                        <td class="text-center">17 Januari 2022</td>
-                        <td class="text-center">Zaenal Abidin</td>
-                        <td class="text-center">Kantor Badan Pertanahan Nasional (BPN) Kabupaten Pesawaran </td>
-                        <td class="text-center">Pemeriksaan Perkara</td>
-                        <td class="text-center">
-                            <a href="detail_panjar.html" class="btn btn-success">
-                                Cek
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">2</td>
-                        <td class="text-center">1/G/2023/PTUN.BL</td>
-                        <td class="text-center">17 Januari 2022</td>
-                        <td class="text-center">Zaenal Abidin</td>
-                        <td class="text-center">Kantor Badan Pertanahan Nasional (BPN) Kabupaten Pesawaran </td>
-                        <td class="text-center">Pemeriksaan Perkara</td>
-                        <td class="text-center">
-                            <a href="detail_panjar.html" class="btn btn-success">
-                                Cek
-                            </a>
-                        </td>
-                    </tr>
                     </table>
-                  </div>
+                </div>
+            </div>
+            <div class="row my-4">
+                <div class="col-12" style="overflow-x: auto;">
+                    <table class="table table-bordered border-primary">
+                        <thead>
+                            <tr>
+                                <th rowspan="2">No</th>
+                                <th rowspan="2" class="col text-center">Tanggal Transaksi</th>
+                                <th rowspan="2" class="col text-center">Uraian</th>
+                                <th rowspan="2" class="col text-center">Pihak</th>
+                                <th colspan="3" class="col text-center">Nominal</th>
+                                <th rowspan="2" class="col text-center">Keterangan</th>
+                                <tr>
+                                    <th class="text-center">Pemasukan</th>
+                                    <th class="text-center">Pengeluaran</th>
+                                    <th class="text-center">Sisa</th>
+                                </tr>
+                            </tr>
+                        </thead>
+                        
+                        <tr>
+                          <td class="text-center">1</td>
+                          <td class="text-center">Rabu, 04 Jan. 2023</td>
+                          <td class="text-center">Panjar Biaya Perkara</td>
+                          <td class="text-center">Penggugat</td>
+                          <td class="text-center">Rp. 710.000 </td>
+                          <td class="text-center"></td>
+                          <td class="text-center">Rp. 710.000</td>
+                          <td class="text-center"></td>
+                      </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </section>
