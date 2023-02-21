@@ -81,6 +81,21 @@ nav{
 
 
 // -- Detail Panjar --//
-th{
-    background-color: #18C3FF;
+#tabel{
+    border-collapse: collapse;
+    td,th{
+        border: 1px solid #ffff;
+        padding: 8px;
+    }
+    th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #2596BE;
+        color: white;
+    }
+
+    tr:nth-child(even){background-color: #f2f2f2;}
+
+    tr:hover {background-color: #ddd;}
 }

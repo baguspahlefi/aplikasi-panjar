@@ -57,13 +57,30 @@ nav h6 {
 }
 
 #pantau-panjar {
-  margin-top: 20vh;
+  margin-top: 15vh;
   margin-bottom: 20vh;
 }
 #pantau-panjar .container {
   background-color: #F3F3F3;
 }
 
-th {
-  background-color: #18C3FF;
+#tabel {
+  border-collapse: collapse;
+}
+#tabel td, #tabel th {
+  border: 1px solid white;
+  padding: 8px;
+}
+#tabel th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #2596BE;
+  color: white;
+}
+#tabel tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+#tabel tr:hover {
+  background-color: #ddd;
 }/*# sourceMappingURL=style.css.map */
