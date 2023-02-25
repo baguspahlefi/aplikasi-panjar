@@ -18,6 +18,7 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])
 
 //Ajukan Panjar
 Route::get('/ajukan-panjar', [App\Http\Controllers\AjukanPanjarController::class, 'index'])
+->middleware(['auth'])
 ->name('ajukanPanjar');
 
 //Pantau Panjar
@@ -29,9 +30,13 @@ Route::get('/detail-panjar', [App\Http\Controllers\DetailPanjarController::class
 ->name('detailPanjar');
 
 ///////// Admin //////////
-Route::get('/adminpanjar', [App\Http\Controllers\Admin\HomeController::class, 'index'])
+Route::get('/admin', [App\Http\Controllers\Admin\HomeController::class, 'index'])
+->middleware(['auth','admin'])
 ->name('homeAdmin');
 
-Route::get('/adminpanjar/detail-perkara', [App\Http\Controllers\Admin\DetailPerkaraController::class, 'index'])
+Route::get('/admin/detail-perkara', [App\Http\Controllers\Admin\DetailPerkaraController::class, 'index'])
+->middleware(['auth','admin'])
 ->name('detailPerkaraAdmin');
 
+
+Auth::routes();

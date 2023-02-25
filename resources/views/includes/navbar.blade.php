@@ -34,10 +34,23 @@
             </div>
             <div class="offcanvas-body" id="isi-nav">          
                 <div class="navbar-nav justify-content-end flex-grow-1 ">
+                    @guest
+                        <a class="nav-link mx-2" aria-current="page" href=" {{route('home')}} ">Beranda</a>
+                        <a class="nav-link mx-2" href="#">Tentang</a>
+                        <a class="nav-link mx-2 nav-masuk " href="{{url('login')}}">Login</a>
+                        <a class="nav-link nav-daftar mx-2" href="{{url('register')}}">Daftar</a>
+                    @endguest
+
+                    @auth
                     <a class="nav-link mx-2" aria-current="page" href=" {{route('home')}} ">Beranda</a>
                     <a class="nav-link mx-2" href="#">Tentang</a>
-                    <a class="nav-link mx-2 nav-masuk " href="#">Login</a>
-                    <a class="nav-link nav-daftar mx-2" href="#">Daftar</a>
+                    <form action="{{url('logout')}}" method="POST">
+                        @csrf
+                        <button class="nav-link text-white ms-2 btn btn-secondary" type="submit">
+                            Keluar
+                        </button>
+                    </form>
+                    @endauth
                 </div>
             </div>
         </div> 
