@@ -24,7 +24,7 @@ class PerkaraTabel extends Model
         'no_telepon',
         'tergugat',
         'prodeo',
-        'status_keterangan',
+        'status_perkara',
         'bukti_transfer'
     ];
 

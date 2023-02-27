@@ -181,6 +181,10 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php
+                                        $totalPemasukan = 0;
+                                        $totalPengeluaran = 0;
+                                        ?>
                                         @foreach($detail as $detail_data)
                                         @if($detail_data->perkara_id == $item->perkara_id)
                                         <tr>
@@ -194,8 +198,8 @@
                                             <td class="text-center">{{$detail_data->keterangan}}</td>
                                         </tr>
                                         <?php
-                                        $totalPemasukan = array_sum(array($detail_data->pemasukan));
-                                        $totalPengeluaran = array_sum(array($detail_data->pengeluaran));
+                                        $totalPemasukan += $detail_data->pemasukan;
+                                        $totalPengeluaran += $detail_data->pengeluaran;
                                         ?>
                                         @endif
                                         @endforeach

@@ -33,7 +33,9 @@ class HomeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $item = $request->all();
+        PerkaraTabel::create($item);
+        return redirect('/admin');
     }
 
     /**

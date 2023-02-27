@@ -34,6 +34,8 @@ Route::get('/admin', [App\Http\Controllers\Admin\HomeController::class, 'index']
 ->middleware(['auth','admin'])
 ->name('homeAdmin');
 
+Route::post('/admin/form', [App\Http\Controllers\Admin\HomeController::class, 'store'])->name('perkara.store');
+
 Route::get('/admin/detail-perkara/{id}', [App\Http\Controllers\Admin\HomeController::class, 'show'])
 ->middleware(['auth','admin'])
 ->name('perkara.show');

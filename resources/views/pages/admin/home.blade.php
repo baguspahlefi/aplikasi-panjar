@@ -85,46 +85,67 @@
                                             <h1 class="modal-title text-center fs-5" id="exampleModalLabel">Tambah Perkara</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
+                                        
+                                            
                                         <div class="modal-body">
-                                            <form class="row g-3">
+                                        
+                                            <form action="{{route('perkara.store')}}" method="POST" enctype="multipart/form-data" class="row g-3">
+                                            @csrf
                                                 <div class="col-6">
                                                     <p class="fs-5 my-auto mx-auto">Nomor Perkara</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+                                                    <input class="form-control" type="text" id="nomor_perkara" name="nomor_perkara" placeholder="Default input" aria-label="default input example">
                                                 </div>
                                                 <div class="col-6">
                                                     <p class="fs-5 my-auto mx-auto">Tanggal Pendaftaran</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+                                                    <input type="date" name="tgl_pendaftaran" id="tgl_pendaftaran" class="form-control" required>
+                                                </div>
+                                                <div class="col-6">
+                                                    <p class="fs-5 my-auto mx-auto">Klasifikasi Perkara</p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <input class="form-control" type="text" id="klasifikasi" name="klasifikasi" placeholder="Default input" aria-label="default input example">
                                                 </div>
                                                 <div class="col-6">
                                                     <p class="fs-5 my-auto mx-auto">Penggugat</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+                                                    <input class="form-control" type="text" id="penggugat" name="penggugat" placeholder="Default input" aria-label="default input example">
+                                                </div>
+                                                <div class="col-6">
+                                                    <p class="fs-5 my-auto mx-auto">No Telepon Penggugat</p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <input class="form-control" type="text" id="no_telepon" name="no_telepon" placeholder="Default input" aria-label="default input example">
                                                 </div>
                                                 <div class="col-6">
                                                     <p class="fs-5 my-auto mx-auto">Tergugat</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+                                                    <input class="form-control" type="text" id="tergugat" name="tergugat" placeholder="Default input" aria-label="default input example">
                                                 </div>
                                                 <div class="col-6">
                                                     <p class="fs-5 my-auto mx-auto">Prodeo</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+                                                    <input class="form-control" type="text" id="prodeo" name="prodeo" placeholder="Default input" aria-label="default input example">
                                                 </div>
-                                                
-
+                                                <div class="col-6">
+                                                    <p class="fs-5 my-auto mx-auto">Status Perkara</p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <input class="form-control" type="text" id="status_perkara" name="status_perkara" placeholder="Default input" aria-label="default input example">
+                                                </div>
+                                                <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success">Simpan</button>
+                                        </div>
                                               </form>
                                         </div>
-                                        <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-success">Simpan</button>
-                                        </div>
+                                      
                                     </div>
                                 </div>
                             </div>
