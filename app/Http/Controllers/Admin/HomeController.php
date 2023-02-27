@@ -7,6 +7,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Models\PerkaraTabel;
+use App\Models\PerkaraDetailTabel;
 
 class HomeController extends Controller
 {
@@ -43,7 +44,7 @@ class HomeController extends Controller
         $item = PerkaraTabel::findOrFail($id);
        
         return view('pages.admin.detail-perkara',
-        [ 'item' =>$item]);
+        [ 'item' =>$item, 'detail' => PerkaraDetailTabel::get()]);
     }
 
     /**

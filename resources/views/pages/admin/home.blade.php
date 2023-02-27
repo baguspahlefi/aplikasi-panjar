@@ -152,9 +152,9 @@
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
                                         <td>{{$perkaraData->nomor_perkara}}</td>
-                                        <td> {{$perkaraData->tgl_pendaftaran}} </td>
-                                        <td>Tender</td>
-                                        <td>{{$perkaraData->email}}</td>
+                                        <td>{{$perkaraData->tgl_pendaftaran}} </td>
+                                        <td>{{$perkaraData->klasifikasi}}</td>
+                                        <td>{{$perkaraData->penggugat}}</td>
                                         <td>{{$perkaraData->tergugat}}</td>
                                         <td>{{$perkaraData->prodeo}}</td>
                                         <td>{{$perkaraData->status_perkara}}</td>

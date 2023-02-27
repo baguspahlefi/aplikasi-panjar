@@ -18,11 +18,14 @@ class PerkaraTabel extends Model
 
     protected $fillable = [
         'nomor_perkara',
+        'klasifikasi',
         'tgl_pendaftaran',
-        'email',
+        'penggugat',
+        'no_telepon',
         'tergugat',
         'prodeo',
-        'status_keterangan'
+        'status_keterangan',
+        'bukti_transfer'
     ];
 
     public function perkara_detail_tabels()

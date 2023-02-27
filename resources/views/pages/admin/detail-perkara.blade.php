@@ -93,9 +93,9 @@
                                     <tr>
                                         <td class="text-center">{{$item->perkara_id}}</td>
                                         <td class="text-center"> {{$item->nomor_perkara}} </td>
-                                        <td class="text-center">Klasifikasi</td>
+                                        <td class="text-center">{{$item->klasifikasi}}</td>
                                         <td class="text-center">{{$item->tgl_pendaftaran}}</td>
-                                        <td class="text-center">{{$item->email}}</td>
+                                        <td class="text-center">{{$item->penggugat}}</td>
                                         <td class="text-center">{{$item->tergugat}} </td>
                                         <td class="text-center">{{$item->status_perkara}}</td>
                                     </tr>
@@ -181,42 +181,30 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach($detail as $detail_data)
+                                        @if($detail_data->perkara_id == $item->perkara_id)
                                         <tr>
-                                            <td class="text-center">1</td>
-                                            <td class="text-center">Rabu, 04 Jan. 2023</td>
-                                            <td class="text-center">Panjar Biaya Perkara</td>
-                                            <td class="text-center">Penggugat</td>
-                                            <td class="text-center">Rp. 710.000 </td>
+                                            <td class="text-center">{{$loop->iteration}}</td>
+                                            <td class="text-center">{{$detail_data->tgl_transaksi}}</td>
+                                            <td class="text-center">{{$detail_data->uraian}}</td>
+                                            <td class="text-center">{{$detail_data->pihak}}</td>
+                                            <td class="text-center">{{$detail_data->pemasukan}}</td>
+                                            <td class="text-center">{{$detail_data->pengeluaran}}</td>
                                             <td class="text-center"></td>
-                                            <td class="text-center">Rp. 710.000</td>
-                                            <td class="text-center"></td>
+                                            <td class="text-center">{{$detail_data->keterangan}}</td>
                                         </tr>
-                                        <tr>
-                                            <td class="text-center">2</td>
-                                            <td class="text-center">Rabu, 04 Jan. 2023</td>
-                                            <td class="text-center">Biaya Pendaftaran/ PNPB</td>
-                                            <td class="text-center">Bagus Pahlefi</td>
-                                            <td class="text-center"> </td>
-                                            <td class="text-center">Rp. 30.000</td>
-                                            <td class="text-center">Rp. 680.000</td>
-                                            <td class="text-center"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">3</td>
-                                            <td class="text-center">Rabu, 04 Jan. 2023</td>
-                                            <td class="text-center">Biaya Pendaftaran/ PNPB</td>
-                                            <td class="text-center">Bagus Pahlefi</td>
-                                            <td class="text-center"> </td>
-                                            <td class="text-center">Rp. 30.000</td>
-                                            <td class="text-center">Rp. 680.000</td>
-                                            <td class="text-center"></td>
-                                        </tr>
+                                        <?php
+                                        $totalPemasukan = array_sum(array($detail_data->pemasukan));
+                                        $totalPengeluaran = array_sum(array($detail_data->pengeluaran));
+                                        ?>
+                                        @endif
+                                        @endforeach
                                     </tbody>
                                     <tfoot>
                                         <td colspan="4" class="text-dark fw-bold text-center">Total</td>
-                                        <td class="text-dark fw-bold text-center">Rp. 710.000</td>
-                                        <td class="text-dark fw-bold text-center">Rp. 710.000</td>
-                                        <td class="text-dark fw-bold text-center">0</td>
+                                        <td class="text-dark fw-bold text-center">{{$totalPemasukan}}</td>
+                                        <td class="text-dark fw-bold text-center">{{$totalPengeluaran}}</td>
+                                        <td class="text-dark fw-bold text-center">{{$totalPemasukan-$totalPengeluaran}}</td>
                                         <td class="text-primary text-center">
                                             <a href="#">Bukti Transfer</a>
                                         </td>
