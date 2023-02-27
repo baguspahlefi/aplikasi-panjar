@@ -3,35 +3,6 @@
     Dashboard Admin - Aplikasi Panjar
 @endsection
 @section('content')
-<body class="sb-nav-fixed">
-    <nav class="sb-topnav navbar navbar-expand navbar-dark" style="background-color: #30923A;">
-        <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="{{route('homeAdmin')}}">
-            Admin Aplikasi Panjar
-        </a>
-        <!-- Sidebar Toggle-->
-        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-
-        <!-- Navbar-->
-        <ul class="navbar-nav justify-content-end flex-grow-1">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#!">Settings</a></li>
-                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                    <li><hr class="dropdown-divider" /></li>
-                    <li>
-                        <form action="{{url('logout')}}" method="POST">
-                            @csrf
-                            <button class="btn btn-secondary" type="submit">
-                                Logout
-                            </button>
-                        </form>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
             <nav class="sb-sidenav accordion bg-success text-white" id="sidenavAccordion">
@@ -91,31 +62,41 @@
                                                     <p class="fs-5 my-auto mx-auto">Nomor Perkara</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+                                                    <input class="form-control" type="text" placeholder="Nomor Perkara" aria-label="default input example">
                                                 </div>
                                                 <div class="col-6">
                                                     <p class="fs-5 my-auto mx-auto">Tanggal Pendaftaran</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+                                                    <input type="date" class="form-control" id="date" name="date" placeholder="MM/DD/YYY" />
+                                                </div>
+                                                <div class="col-6">
+                                                    <p class="fs-5 my-auto mx-auto">Klasifikasi Perkara</p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <input class="form-control" type="text" placeholder="Klasifikasi Perkara" aria-label="default input example">
                                                 </div>
                                                 <div class="col-6">
                                                     <p class="fs-5 my-auto mx-auto">Penggugat</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+                                                    <input class="form-control" type="text" placeholder="Penggugat" aria-label="default input example">
                                                 </div>
                                                 <div class="col-6">
                                                     <p class="fs-5 my-auto mx-auto">Tergugat</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+                                                    <input class="form-control" type="text" placeholder="Tergugat" aria-label="default input example">
                                                 </div>
                                                 <div class="col-6">
                                                     <p class="fs-5 my-auto mx-auto">Prodeo</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+                                                    <select class="form-select form-select" aria-label=".form-select-lg example">
+                                                        <option selected>Pilih salah satu</option>
+                                                        <option value="YA">YA</option>
+                                                        <option value="TIDAK">TIDAK</option>
+                                                      </select>
                                                 </div>
                                                 
 
@@ -194,5 +175,4 @@
             </footer>
         </div>
     </div>
-</body>
 @endsection
