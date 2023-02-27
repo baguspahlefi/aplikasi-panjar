@@ -156,30 +156,20 @@
                                     </tr>
                                 </tfoot>
                                 <tbody>
+                                    @foreach($perkara as $perkaraData)
                                     <tr>
-                                        <td>1</td>
-                                        <td>1/G/2023/PTUN.BL</td>
+                                        <td>{{$loop->iteration}}</td>
+                                        <td>{{$perkaraData->nomor_perkara}}</td>
                                         <td>Tender</td>
-                                        <td>Zaenal Abidin</td>
-                                        <td>CV Maju Jaya Abadi</td>
-                                        <td>Lorem ipsum</td>
+                                        <td>{{$perkaraData->email}}</td>
+                                        <td>{{$perkaraData->tergugat}}</td>
+                                        <td>{{$perkaraData->status_perkara}}</td>
                                         <td>
                                             <a href="#">Edit</a>
                                             <a href="{{route('detailPerkaraAdmin')}}">Detail</a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>1/G/2023/PTUN.BL</td>
-                                        <td>Tender</td>
-                                        <td>Zaenal Abidin</td>
-                                        <td>CV Maju Jaya Abadi</td>
-                                        <td>Lorem ipsum</td>
-                                        <td>
-                                            <a href="#">Edit</a>
-                                            <a href="{{route('detailPerkaraAdmin')}}">Detail</a>
-                                        </td>
-                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

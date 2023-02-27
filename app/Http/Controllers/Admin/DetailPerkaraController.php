@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use App\Models\PerkaraTabel;
+use App\Models\PerkaraDetailTabel;
 
 class DetailPerkaraController extends Controller
 {
@@ -14,7 +16,9 @@ class DetailPerkaraController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.detail-perkara');
+        return view('pages.admin.detail-perkara', ['title' => 'Halaman Detail',
+        'perkara' => PerkaraTabel::orderBy('tgl_pendaftaran')->get(),
+        'perkara_detail' => PerkaraDetailTabel::orderBy('tgl_transaksi')->get()]);
     }
 
     /**
