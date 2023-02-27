@@ -12,7 +12,8 @@
         @stack('addon-styles')
     </head>
 
-    <body>
+    <body class="sb-nav-fixed">
+        @include('includes.admin.navbar')
         @yield('content')
         
         @stack('prepend-scripts')

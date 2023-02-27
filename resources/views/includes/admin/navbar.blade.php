@@ -1,6 +1,6 @@
 <nav class="sb-topnav navbar navbar-expand navbar-dark" style="background-color: #30923A;">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="index.html">
+    <a class="navbar-brand ps-3" href="{{route('homeAdmin')}}">
         Admin Aplikasi Panjar
     </a>
     <!-- Sidebar Toggle-->
@@ -14,7 +14,14 @@
                 <li><a class="dropdown-item" href="#!">Settings</a></li>
                 <li><a class="dropdown-item" href="#!">Activity Log</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#!">Logout</a></li>
+                <li>
+                    <form action="{{url('logout')}}" method="POST">
+                        @csrf
+                        <button class="btn btn-secondary" type="submit">
+                            Logout
+                        </button>
+                    </form>
+                </li>
             </ul>
         </li>
     </ul>
