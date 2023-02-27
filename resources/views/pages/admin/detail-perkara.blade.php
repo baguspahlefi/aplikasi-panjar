@@ -82,21 +82,24 @@
                                         <tr>
                                             <th>No</th>
                                             <th class="col text-center">Nomor Perkara</th>
+                                            <th class="col text-center">Klasifikasi Perkara</th>
                                             <th class="col text-center">Tanggal</th>
                                             <th class="col text-center">Penggugat</th>
                                             <th class="col text-center">Tergugat</th>
                                             <th class="col text-center">Status Perkara</th>
                                         </tr>
                                     </thead>
-                                  
+                                    @foreach($perkara as $perkaraData)
                                     <tr>
-                                    <td class="text-center">1</td>
-                                    <td class="text-center">1/G/2023/PTUN.BL</td>
-                                    <td class="text-center">17 Januari 2022</td>
-                                    <td class="text-center">Zaenal Abidin</td>
-                                    <td class="text-center">Kantor Badan Pertanahan Nasional (BPN) Kabupaten Pesawaran </td>
-                                    <td class="text-center">Pemeriksaan Perkara</td>
-                                </tr>
+                                        <td>{{$loop->iteration}}</td>
+                                        <td>{{$perkaraData->nomor_perkara}}</td>
+                                        <td>Tender</td>
+                                        <td>{{$perkaraData->email}}</td>
+                                        <td>{{$perkaraData->tergugat}}</td>
+                                        <td>{{$perkaraData->status_perkara}}</td>
+                                    </tr>
+                                    @endforeach
+                                   
                                 </table>
                             </div>
                         </div>

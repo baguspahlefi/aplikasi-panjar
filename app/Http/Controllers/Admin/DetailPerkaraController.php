@@ -14,7 +14,7 @@ class DetailPerkaraController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(string $id)
     {
         return view('pages.admin.detail-perkara', ['title' => 'Halaman Detail',
         'perkara' => PerkaraTabel::orderBy('tgl_pendaftaran')->get(),

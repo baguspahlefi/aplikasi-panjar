@@ -166,7 +166,7 @@
                                         <td>{{$perkaraData->status_perkara}}</td>
                                         <td>
                                             <a href="#">Edit</a>
-                                            <a href="{{route('detailPerkaraAdmin')}}">Detail</a>
+                                            <a href="{{route('detailPerkaraAdmin',$perkaraData->perkara_id)}}">Detail</a>
                                         </td>
                                     </tr>
                                     @endforeach
