@@ -6,7 +6,7 @@
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark" style="background-color: #30923A;">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="index.html">
+        <a class="navbar-brand ps-3" href="{{route('homeAdmin')}}">
             Admin Aplikasi Panjar
         </a>
         <!-- Sidebar Toggle-->
@@ -38,7 +38,7 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Core</div>
-                        <a class="nav-link text-white" href="index.html">
+                        <a class="nav-link text-white" href="{{route('homeAdmin')}}">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
@@ -82,23 +82,24 @@
                                         <tr>
                                             <th>No</th>
                                             <th class="col text-center">Nomor Perkara</th>
-                                            <th class="col text-center">Klasifikasi Perkara</th>
+                                            <th class="col text-center">Klasifikasi</th>
                                             <th class="col text-center">Tanggal</th>
                                             <th class="col text-center">Penggugat</th>
                                             <th class="col text-center">Tergugat</th>
                                             <th class="col text-center">Status Perkara</th>
                                         </tr>
                                     </thead>
-                                    @foreach($perkara as $perkaraData)
+                              
                                     <tr>
-                                        <td>{{$loop->iteration}}</td>
-                                        <td>{{$perkaraData->nomor_perkara}}</td>
-                                        <td>Tender</td>
-                                        <td>{{$perkaraData->email}}</td>
-                                        <td>{{$perkaraData->tergugat}}</td>
-                                        <td>{{$perkaraData->status_perkara}}</td>
+                                        <td class="text-center">{{$item->perkara_id}}</td>
+                                        <td class="text-center"> {{$item->nomor_perkara}} </td>
+                                        <td class="text-center">Klasifikasi</td>
+                                        <td class="text-center">{{$item->tgl_pendaftaran}}</td>
+                                        <td class="text-center">{{$item->email}}</td>
+                                        <td class="text-center">{{$item->tergugat}} </td>
+                                        <td class="text-center">{{$item->status_perkara}}</td>
                                     </tr>
-                                    @endforeach
+                           
                                    
                                 </table>
                             </div>

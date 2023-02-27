@@ -34,9 +34,9 @@ Route::get('/admin', [App\Http\Controllers\Admin\HomeController::class, 'index']
 ->middleware(['auth','admin'])
 ->name('homeAdmin');
 
-Route::get('/admin/detail-perkara/{id}', [App\Http\Controllers\Admin\DetailPerkaraController::class, 'index'])
+Route::get('/admin/detail-perkara/{id}', [App\Http\Controllers\Admin\HomeController::class, 'show'])
 ->middleware(['auth','admin'])
-->name('detailPerkaraAdmin');
+->name('perkara.show');
 
 Route::get('/admin/detail-perkara', [App\Http\Controllers\Admin\DetailPerkaraController::class, 'index'])
 ->middleware(['auth','admin'])

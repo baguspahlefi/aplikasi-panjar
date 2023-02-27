@@ -6,7 +6,7 @@
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark" style="background-color: #30923A;">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="index.html">
+        <a class="navbar-brand ps-3" href="{{route('homeAdmin')}}">
             Admin Aplikasi Panjar
         </a>
         <!-- Sidebar Toggle-->
@@ -38,7 +38,7 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Core</div>
-                        <a class="nav-link text-white" href="index.html">
+                        <a class="nav-link text-white" href="{{route('homeAdmin')}}">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
@@ -137,13 +137,35 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Nomor Perkara</th>
+                                        <th>Tanggal Pendaftaran</th>
                                         <th>Klasifikasi Perkara</th>
                                         <th>Pengguggat</th>
                                         <th>Tergugat</th>
+                                        <th>Prodeo</th>
                                         <th>Proses Terakhir</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
+
+                                <tbody>
+                                    @foreach($perkara as $perkaraData)
+                                    <tr>
+                                        <td>{{$loop->iteration}}</td>
+                                        <td>{{$perkaraData->nomor_perkara}}</td>
+                                        <td> {{$perkaraData->tgl_pendaftaran}} </td>
+                                        <td>Tender</td>
+                                        <td>{{$perkaraData->email}}</td>
+                                        <td>{{$perkaraData->tergugat}}</td>
+                                        <td>{{$perkaraData->prodeo}}</td>
+                                        <td>{{$perkaraData->status_perkara}}</td>
+                                        <td>
+                                            <a href="#">Edit</a>
+                                            <a href="{{route('perkara.show',$perkaraData->perkara_id)}}">Detail</a>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+
                                 <tfoot>
                                     <tr>
                                         <th>No</th>
@@ -151,26 +173,12 @@
                                         <th>Klasifikasi Perkara</th>
                                         <th>Pengguggat</th>
                                         <th>Tergugat</th>
+                                        <th>Prodeo</th>
                                         <th>Proses Terakhir</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </tfoot>
-                                <tbody>
-                                    @foreach($perkara as $perkaraData)
-                                    <tr>
-                                        <td>{{$loop->iteration}}</td>
-                                        <td>{{$perkaraData->nomor_perkara}}</td>
-                                        <td>Tender</td>
-                                        <td>{{$perkaraData->email}}</td>
-                                        <td>{{$perkaraData->tergugat}}</td>
-                                        <td>{{$perkaraData->status_perkara}}</td>
-                                        <td>
-                                            <a href="#">Edit</a>
-                                            <a href="{{route('detailPerkaraAdmin',$perkaraData->perkara_id)}}">Detail</a>
-                                        </td>
-                                    </tr>
-                                    @endforeach
-                                </tbody>
+                                
                             </table>
                         </div>
                     </div>

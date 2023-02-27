@@ -40,7 +40,10 @@ class HomeController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $item = PerkaraTabel::findOrFail($id);
+       
+        return view('pages.admin.detail-perkara',
+        [ 'item' =>$item]);
     }
 
     /**
