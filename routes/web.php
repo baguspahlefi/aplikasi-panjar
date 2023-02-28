@@ -36,6 +36,8 @@ Route::get('/admin', [App\Http\Controllers\Admin\HomeController::class, 'index']
 
 Route::post('/admin/form', [App\Http\Controllers\Admin\HomeController::class, 'store'])
 ->middleware(['auth','admin'])
+
+->middleware(['auth','admin'])
 ->name('perkara.store');
 
 Route::delete('/admin/delete/{id}', [App\Http\Controllers\Admin\HomeController::class, 'destroy'])
@@ -49,6 +51,15 @@ Route::get('/admin/detail-perkara/{id}', [App\Http\Controllers\Admin\HomeControl
 Route::get('/admin/detail-perkara', [App\Http\Controllers\Admin\DetailPerkaraController::class, 'index'])
 ->middleware(['auth','admin'])
 ->name('detailPerkaraAdmin.edit');
+
+
+
+
+Route::get('/admin/data-penggugat', [App\Http\Controllers\Admin\DataPenggugatController::class, 'index'])
+->middleware(['auth','admin'])
+->name('dataPenggugat');
+
+
 
 Route::post('/admin/detail-perkara', [App\Http\Controllers\Admin\DetailPerkaraController::class, 'store'])
 ->middleware(['auth','admin'])
