@@ -7,6 +7,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Models\PerkaraTabel;
+use Illuminate\Support\Str;
 use App\Models\PerkaraDetailTabel;
 
 class DetailPerkaraController extends Controller
@@ -32,7 +33,16 @@ class DetailPerkaraController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $item = new PerkaraDetailTabel();
+        $item->perkara_id = $request->perkara_id;
+        $item->uraian = $request->uraian;
+        $item->tgl_transaksi = $request->tgl_transaksi;
+        $item->pihak = $request->pihak;
+        $item->pemasukan = $request->pemasukan;
+        $item->pengeluaran = $request->pengeluaran;
+        $item->keterangan = $request->keterangan;
+        $item->save();
+        return redirect(route('perkara.show',$item->perkara_id));
     }
 
     /**

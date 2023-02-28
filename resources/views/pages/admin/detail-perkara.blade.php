@@ -78,7 +78,7 @@
                         <div class="row">
                             <div class="col-12 float-end">
                                 <button type="button" class="btn btn-success float-end" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    Tambah Progres
+                                    Tambah Progress
                                 </button>
                             </div>
                              <!-- Modal -->
@@ -90,12 +90,16 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <form class="row g-3">
-                                                <div class="col-6">
-                                                    <p class="fs-5 my-auto mx-auto">Tanggal Tranksaksi</p>
+                                        <form action="{{route('detail.store')}}" method="POST" enctype="multipart/form-data" class="row g-3">
+                                            @csrf
+                                                <div class="col-6 d-none">
+                                                    <input class="form-control" type="text" id="perkara_id" name="perkara_id" value="{{$item->perkara_id}}" placeholder="Default input" aria-label="default input example">
                                                 </div>
                                                 <div class="col-6">
-                                                    <input class="form-control" type="date" name="tgl_transaksi" placeholder="Default input" aria-label="default input example">
+                                                    <p class="fs-5 my-auto mx-auto">Tanggal Transaksi</p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <input class="form-control" type="date" id="tgl_transaksi" name="tgl_transaksi" placeholder="Default input" aria-label="default input example">
                                                 </div>
                                                 <div class="col-6">
                                                     <p class="fs-5 my-auto mx-auto">Uraian</p>
@@ -107,34 +111,34 @@
                                                     <p class="fs-5 my-auto mx-auto">Pihak</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input class="form-control" type="text" placeholder="Pihak" aria-label="default input example">
+                                                    <input class="form-control" type="text" id="pihak" name="pihak" placeholder="Pihak" aria-label="default input example">
                                                 </div>
                                                 <div class="col-6">
                                                     <p class="fs-5 my-auto mx-auto">Pemasukan</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input id="dengan-rupiah-1" class="form-control" type="text" placeholder="pemasukan" aria-label="default input example">
+                                                    <input id="dengan-rupiah-1" class="form-control" type="text" id="pemasukan" name="pemasukan" placeholder="pemasukan" aria-label="default input example">
                                                 </div>
                                                 <div class="col-6">
                                                     <p class="fs-5 my-auto mx-auto">Pengeluaran</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input id="dengan-rupiah-2" class="form-control" type="text" placeholder="Pemasukan" aria-label="default input example">
+                                                    <input id="dengan-rupiah-2" class="form-control" type="text" id="pengeluaran" name="pengeluaran" placeholder="Pemasukan" aria-label="default input example">
                                                 </div>
                                                 <div class="col-6">
                                                     <p class="fs-5 my-auto mx-auto">Keterangan</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input class="form-control" type="text" placeholder="Keterangan" aria-label="default input example">
+                                                    <input class="form-control" type="text" id="keterangan" name="keterangan" placeholder="Keterangan" aria-label="default input example">
                                                 </div>
-                                                
+                                                <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success">Simpan</button>
+                                        </div>
 
                                               </form>
                                         </div>
-                                        <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-success">Simpan</button>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
