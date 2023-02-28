@@ -145,6 +145,13 @@
                                         <td>
                                             <a href="#">Edit</a>
                                             <a href="{{route('perkara.show',$perkaraData->perkara_id)}}">Detail</a>
+                                            <form action="{{route('perkara.destroy',$perkaraData->perkara_id)}}" method="POST"
+                                                    class="d-inline">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <button type="submit" class="btn btn-link">Delete</button>
+                                            </form>
+                                            
                                         </td>
                                     </tr>
                                     @endforeach

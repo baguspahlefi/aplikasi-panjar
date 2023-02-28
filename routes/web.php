@@ -38,6 +38,10 @@ Route::post('/admin/form', [App\Http\Controllers\Admin\HomeController::class, 's
 ->middleware(['auth','admin'])
 ->name('perkara.store');
 
+Route::delete('/admin/delete/{id}', [App\Http\Controllers\Admin\HomeController::class, 'destroy'])
+->middleware(['auth','admin'])
+->name('perkara.destroy');
+
 Route::get('/admin/detail-perkara/{id}', [App\Http\Controllers\Admin\HomeController::class, 'show'])
 ->middleware(['auth','admin'])
 ->name('perkara.show');
@@ -49,6 +53,10 @@ Route::get('/admin/detail-perkara', [App\Http\Controllers\Admin\DetailPerkaraCon
 Route::post('/admin/detail-perkara', [App\Http\Controllers\Admin\DetailPerkaraController::class, 'store'])
 ->middleware(['auth','admin'])
 ->name('detail.store');
+
+Route::delete('/admin/detail-perkara/{id}', [App\Http\Controllers\Admin\DetailPerkaraController::class, 'destroy'])
+->middleware(['auth','admin'])
+->name('detail.destroy');
 
 
 Auth::routes();

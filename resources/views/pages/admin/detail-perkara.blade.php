@@ -154,6 +154,7 @@
                                             <th rowspan="2" class="col text-center">Pihak</th>
                                             <th colspan="3" class="col text-center">Nominal</th>
                                             <th rowspan="2" class="col text-center">Keterangan</th>
+                                            <th rowspan="2">Aksi</th>
                                             <tr>
                                                 <th class="text-center">Pemasukan</th>
                                                 <th class="text-center">Pengeluaran</th>
@@ -177,6 +178,14 @@
                                             <td class="text-center">{{$detail_data->pengeluaran}}</td>
                                             <td class="text-center"></td>
                                             <td class="text-center">{{$detail_data->keterangan}}</td>
+                                            <td class="text-center">
+                                            <form action="{{route('detail.destroy',$detail_data->perkara_detail_id)}}" method="POST"
+                                                    class="d-inline">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <button type="submit" class="btn btn-link">Delete</button>
+                                            </form>
+                                            </td>
                                         </tr>
                                         <?php
                                         $totalPemasukan += $detail_data->pemasukan;

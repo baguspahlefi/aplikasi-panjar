@@ -72,8 +72,10 @@ class DetailPerkaraController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(PerkaraDetailTabel $id)
     {
-        //
+        $id->delete();
+        sleep(1);
+        return redirect(route('perkara.show',$id->perkara_id));
     }
 }
