@@ -8,12 +8,18 @@
             <nav class="sb-sidenav accordion bg-success text-white" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-                        <div class="sb-sidenav-menu-heading">Core</div>
+                        <div class="sb-sidenav-menu-heading">Menu Admin</div>
                         <a class="nav-link text-white" href="{{route('homeAdmin')}}">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
-                        <div class="sb-sidenav-menu-heading">Interface</div>
+                        <a class="nav-link text-white" href="{{route('dataPenggugat')}}">
+                            <div class="sb-nav-link-icon"><i class="fas fa-user-alt"></i></div>
+                            Tabel Penggugat
+                        </a>
+
+                        <!-- 
+                            <div class="sb-sidenav-menu-heading">Interface</div>
                         <a class="nav-link collapsed text-white" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                             Layouts
@@ -25,6 +31,7 @@
                                 <a class="nav-link text-white" href="layout-sidenav-light.html">Light Sidenav</a>
                             </nav>
                         </div>
+                        -->
                      
                     </div>
                 </div>
@@ -105,8 +112,8 @@
                                                     <input class="form-control" type="text" id="status_perkara" name="status_perkara" placeholder="Default input" aria-label="default input example">
                                                 </div>
                                                 <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-success">Simpan</button>
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-success">Simpan</button>
                                         </div>
                                               </form>
                                         </div>
@@ -125,7 +132,7 @@
                                         <th>Nomor Perkara</th>
                                         <th>Tanggal Pendaftaran</th>
                                         <th>Klasifikasi Perkara</th>
-                                        <th>Pengguggat</th>
+                                        <th>Penggugat</th>
                                         <th>Tergugat</th>
                                         <th>Perkara Tingkat</th>
                                         <th>Aksi</th>

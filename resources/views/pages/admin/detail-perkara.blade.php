@@ -8,12 +8,18 @@
             <nav class="sb-sidenav accordion bg-success text-white" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-                        <div class="sb-sidenav-menu-heading">Core</div>
+                        <div class="sb-sidenav-menu-heading">Menu Admin</div>
                         <a class="nav-link text-white" href="{{route('homeAdmin')}}">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
-                        <div class="sb-sidenav-menu-heading">Interface</div>
+                        <a class="nav-link text-white" href="{{route('dataPenggugat')}}">
+                            <div class="sb-nav-link-icon"><i class="fas fa-user-alt"></i></div>
+                            Tabel Penggugat
+                        </a>
+
+                        <!-- 
+                            <div class="sb-sidenav-menu-heading">Interface</div>
                         <a class="nav-link collapsed text-white" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                             Layouts
@@ -25,6 +31,7 @@
                                 <a class="nav-link text-white" href="layout-sidenav-light.html">Light Sidenav</a>
                             </nav>
                         </div>
+                        -->
                      
                     </div>
                 </div>
@@ -63,7 +70,7 @@
                               
                                     <tr>
                                         <td class="text-center">{{$item->perkara_id}}</td>
-                                        <td class="text-center"> {{$item->nomor_perkara}} </td>
+                                        <td class="text-center">{{$item->nomor_perkara}} </td>
                                         <td class="text-center">{{$item->klasifikasi}}</td>
                                         <td class="text-center">{{$item->tgl_pendaftaran}}</td>
                                         <td class="text-center">{{$item->penggugat}}</td>
@@ -169,8 +176,16 @@
                                             <td class="text-center">{{$detail_data->tgl_transaksi}}</td>
                                             <td class="text-center">{{$detail_data->uraian}}</td>
                                             <td class="text-center">{{$detail_data->pihak}}</td>
-                                            <td class="text-center">{{$detail_data->pemasukan}}</td>
-                                            <td class="text-center">{{$detail_data->pengeluaran}}</td>
+                                            <td class="text-center">
+                                                Rp.
+                                                @php
+                                                echo number_format("$detail_data->pemasukan")."<br>";
+                                                @endphp   
+                                            </td>
+                                            <td class="text-center"> Rp.
+                                                @php
+                                                echo number_format("$detail_data->pengeluaran")."<br>";
+                                                @endphp</td>
                                             <td class="text-center"></td>
                                             <td class="text-center">{{$detail_data->keterangan}}</td>
                                         </tr>
@@ -183,9 +198,26 @@
                                     </tbody>
                                     <tfoot>
                                         <td colspan="4" class="text-dark fw-bold text-center">Total</td>
-                                        <td class="text-dark fw-bold text-center">{{$totalPemasukan}}</td>
-                                        <td class="text-dark fw-bold text-center">{{$totalPengeluaran}}</td>
-                                        <td class="text-dark fw-bold text-center">{{$totalPemasukan-$totalPengeluaran}}</td>
+                                        <td class="text-dark fw-bold text-center">
+                                            Rp.
+                                            @php
+                                            echo number_format("$totalPemasukan")."<br>";
+                                            @endphp
+                                        </td>
+                                        <td class="text-dark fw-bold text-center">
+                                            Rp.
+                                            @php
+                                            echo number_format("$totalPengeluaran")."<br>";
+                                            @endphp
+                                        
+                                        </td>
+                                        <td class="text-dark fw-bold text-center">
+                                            Rp.
+                                            @php
+                                            echo number_format("$totalPemasukan"-"$totalPengeluaran")."<br>";
+                                            @endphp
+                                
+                                        </td>
                                         <td class="text-primary text-center">
                                             <a href="#">Bukti Transfer</a>
                                         </td>
