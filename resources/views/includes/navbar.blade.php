@@ -12,7 +12,7 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p style="font-size: 10px;">PENGADILAN TATA USAHA BANDAR LAMPUNG</p>
+                            <p style="font-size: 10px;">PENGADILAN TATA USAHA NEGARA BANDAR LAMPUNG</p>
                         </div>
                     </div>
                 </div>

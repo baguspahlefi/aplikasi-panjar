@@ -57,7 +57,7 @@
                                             <th class="col text-center">Tanggal</th>
                                             <th class="col text-center">Penggugat</th>
                                             <th class="col text-center">Tergugat</th>
-                                            <th class="col text-center">Status Perkara</th>
+                                            <th class="col text-center">Perkara Tingkat</th>
                                         </tr>
                                     </thead>
                               
@@ -68,7 +68,7 @@
                                         <td class="text-center">{{$item->tgl_pendaftaran}}</td>
                                         <td class="text-center">{{$item->penggugat}}</td>
                                         <td class="text-center">{{$item->tergugat}} </td>
-                                        <td class="text-center">{{$item->status_perkara}}</td>
+                                        <td class="text-center">{{$item->perkara_tingkat}}</td>
                                     </tr>
                            
                                    

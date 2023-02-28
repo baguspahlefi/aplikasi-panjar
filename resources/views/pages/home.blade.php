@@ -9,7 +9,7 @@
             <div class="row h-100 ">
                 <div class="col-md-6 my-auto">
                     <h3 class="hero text-uppercase text-light">
-                        Simplifikasi Pengembalian dan Pemantauan Panjar pada Pengadilan Tata Usaha Bandar Lampung
+                        Simplifikasi Pengembalian dan Pemantauan Panjar pada Pengadilan Tata Usaha Negara Bandar Lampung
                     </h3>
                     <h4 class="font-weight-normal text-light">
                         In publishing and graphic design, Lorem ipsum is a placeholder text commonly 

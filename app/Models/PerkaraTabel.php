@@ -23,8 +23,7 @@ class PerkaraTabel extends Model
         'penggugat',
         'no_telepon',
         'tergugat',
-        'prodeo',
-        'status_perkara',
+        'perkara_tingkat',
         'bukti_transfer'
     ];
 

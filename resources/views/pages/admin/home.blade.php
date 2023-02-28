@@ -99,12 +99,6 @@
                                                     <input class="form-control" type="text" id="tergugat" name="tergugat" placeholder="Default input" aria-label="default input example">
                                                 </div>
                                                 <div class="col-6">
-                                                    <p class="fs-5 my-auto mx-auto">Prodeo</p>
-                                                </div>
-                                                <div class="col-6">
-                                                    <input class="form-control" type="text" id="prodeo" name="prodeo" placeholder="Default input" aria-label="default input example">
-                                                </div>
-                                                <div class="col-6">
                                                     <p class="fs-5 my-auto mx-auto">Status Perkara</p>
                                                 </div>
                                                 <div class="col-6">
@@ -133,8 +127,7 @@
                                         <th>Klasifikasi Perkara</th>
                                         <th>Pengguggat</th>
                                         <th>Tergugat</th>
-                                        <th>Prodeo</th>
-                                        <th>Proses Terakhir</th>
+                                        <th>Perkara Tingkat</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -148,8 +141,7 @@
                                         <td>{{$perkaraData->klasifikasi}}</td>
                                         <td>{{$perkaraData->penggugat}}</td>
                                         <td>{{$perkaraData->tergugat}}</td>
-                                        <td>{{$perkaraData->prodeo}}</td>
-                                        <td>{{$perkaraData->status_perkara}}</td>
+                                        <td>{{$perkaraData->perkara_tingkat}}</td>
                                         <td>
                                             <a href="#">Edit</a>
                                             <a href="{{route('perkara.show',$perkaraData->perkara_id)}}">Detail</a>
