@@ -21,6 +21,10 @@ Route::get('/ajukan-panjar', [App\Http\Controllers\AjukanPanjarController::class
 ->middleware(['auth'])
 ->name('ajukanPanjar');
 
+Route::post('/ajukan-panjar', [App\Http\Controllers\AjukanPanjarController::class, 'store'])
+->middleware(['auth'])
+->name('ajukanPanjar.store');
+
 //Pantau Panjar
 Route::get('/pantau-panjar', [App\Http\Controllers\PantauPanjarController::class, 'index'])
 ->name('pantauPanjar');

@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use App\Models\AjukanPanjarTabel;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
 
 class AjukanPanjarController extends Controller
 {
@@ -29,7 +32,9 @@ class AjukanPanjarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        AjukanPanjarTabel::create($data);
+        return redirect(route('home'));
     }
 
     /**
