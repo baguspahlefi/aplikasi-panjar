@@ -16,7 +16,7 @@
                         used to demonstrate the visual form of a 
                     </h4>
                     <a href=" {{route('ajukanPanjar')}} ">
-                        <button class="btn btn-panjar">Ajukan Panjar</button>
+                        <button class="btn btn-panjar">Form Adminitrasi</button>
                     </a>
                     <a href=" {{route('pantauPanjar')}} ">
                         <button class="btn btn-panjar mx-4">Pantau Panjar</button>

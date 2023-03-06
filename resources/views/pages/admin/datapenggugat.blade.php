@@ -66,21 +66,24 @@
                                 </thead>
 
                                 <tbody>
+                                    @forelse ($items as $item)
                                     <tr>
-                                        <td>1</td>
-                                        <td>1/G/2023/PTUN.BL</td>
-                                        <td>Bagus Pahlefi </td>
-                                        <td>085608537600</td>
-                                        <td>bagus@gmail.com</td>
-                                        <td>3261283</td>
+                                        <td>{{$loop->iteration}}</td>
+                                        <td>{{ $item->no_perkara }}</td>
+                                        <td>{{ $item->nama_lengkap }}</td>
+                                        <td>{{ $item->no_telepon }}</td>
+                                        <td>{{ $item->email }}</td>
+                                        <td>{{ $item->no_rekening }}</td>
                                         <td> 
-                                            <img src="{{url('images/foto-ktp.jpg')}}" alt="" width="150" class="img-thumbnail">
+                                            <img src="{{Storage::url($item->ktp)}}" alt="" width="150" class="img-thumbnail" data-mdb-img="{{Storage::url($item->ktp)}}">
                                         </td>
                                         <td>
-                                            <img src="{{url('images/foto-ktp.jpg')}}" alt="" width="150" class="img-thumbnail">
+                                            <img src="{{Storage::url($item->kta)}}" alt="" width="150" class="img-thumbnail">
                                         </td>
                                     </tr>
-                            
+                                    @empty
+                                        
+                                    @endforelse
                                 </tbody>
 
                                 <tfoot>
@@ -111,4 +114,6 @@
             </footer>
         </div>
     </div>
+
+    
 @endsection

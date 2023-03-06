@@ -63,10 +63,8 @@
                                             <h1 class="modal-title text-center fs-5" id="exampleModalLabel">Tambah Perkara</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
-                                        
-                                            
+   
                                         <div class="modal-body">
-                                        
                                             <form action="{{route('perkara.store')}}" method="POST" enctype="multipart/form-data" class="row g-3">
                                             @csrf
                                                 <div class="col-6">
@@ -109,7 +107,7 @@
                                                     <p class="fs-5 my-auto mx-auto">Perkara Tingkat</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input class="form-control" type="text" id="status_perkara" name="status_perkara" placeholder="Default input" aria-label="default input example">
+                                                    <input class="form-control" type="text" id="perkara_tingkat" name="perkara_tingkat" placeholder="Default input" aria-label="default input example">
                                                 </div>
                                                 <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -140,7 +138,7 @@
                                 </thead>
 
                                 <tbody>
-                                    @foreach($perkara as $perkaraData)
+                                    @foreach ($perkara as $perkaraData)
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
                                         <td>{{$perkaraData->nomor_perkara}}</td>
@@ -163,19 +161,6 @@
                                     </tr>
                                     @endforeach
                                 </tbody>
-
-                                <tfoot>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Nomor Perkara</th>
-                                        <th>Klasifikasi Perkara</th>
-                                        <th>Pengguggat</th>
-                                        <th>Tergugat</th>
-                                        <th>Prodeo</th>
-                                        <th>Proses Terakhir</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </tfoot>
                                 
                             </table>
                         </div>

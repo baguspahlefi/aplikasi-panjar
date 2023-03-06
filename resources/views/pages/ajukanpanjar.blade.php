@@ -13,9 +13,10 @@
                     </h3>
                 </div>
             </div>
-            <div class="row h-100 ">
+            
             <form action="{{route('ajukanPanjar.store')}}" method="post" enctype="multipart/form-data">
                 @csrf
+                <div class="row h-100 ">
                 <div class="col-md-4 my-auto">
                     <div class="mb-3 mt-4">
                         <label for="exampleFormControlInput1" class="form-label text-dark">Nama Lengkap</label>
@@ -71,9 +72,10 @@
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
+            </div>
             </form>
            
-            </div>
+            
          
         </div>
     </section>

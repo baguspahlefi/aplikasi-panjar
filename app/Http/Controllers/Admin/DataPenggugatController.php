@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use App\Models\AjukanPanjarTabel;
 use App\Models\PerkaraTabel;
 use App\Models\PerkaraDetailTabel;
 
@@ -16,7 +17,10 @@ class DataPenggugatController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.datapenggugat');
+        $items = AjukanPanjarTabel::all();
+        
+        return view('pages.admin.datapenggugat',
+        [ 'items' =>$items]);
     }
 
     /**

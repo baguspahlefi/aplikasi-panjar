@@ -69,9 +69,9 @@
               class="mb-4 mt-0 d-inline-block mx-auto"
               style="width: 60px; background-color: #7c4dff; height: 2px"
               />
-          <p style="color: #3d4444;"><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-          <p style="color: #3d4444;"><i class="fas fa-envelope mr-3"></i> info@example.com</p>
-          <p style="color: #3d4444;"><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+          <p style="color: #3d4444;"><i class="fas fa-home mr-3"></i> Jl. P. Emir M. Noer No. 27, Durian Payung, Tanjung Karang Pusat, Bandar Lampung.</p>
+          <p style="color: #3d4444;"><i class="fas fa-envelope mr-3"></i> bandarlampung@ptun.org</p>
+          <p style="color: #3d4444;"><i class="fas fa-phone mr-3"></i> Telp. (0721) 258320 | Fax. (0721) 258320</p>
       </div>
       <!-- Grid column -->
       </div>
@@ -85,7 +85,7 @@
       class="text-center text-dark p-3"
       style="background-color: rgba(0, 0, 0, 0.2)">
       © 2023 Copyright:
-      <a class="text-dark text-decoration-none" href="#">aplikasi-panjar.com</a>
+      <a class="text-dark text-decoration-none" href="#">AlBaGas</a>
   </div>
   <!-- Copyright -->
 </footer>

@@ -33,8 +33,17 @@ class AjukanPanjarController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+        $data['ktp'] = $request->file('ktp')->store(
+            'assets/gallery','public'
+        );
+        
+        $data['kta'] = $request->file('kta')->store(
+            'assets/gallery','public'
+        );
+        
+
         AjukanPanjarTabel::create($data);
-        return redirect(route('home'));
+        return view('pages.success-input');
     }
 
     /**
