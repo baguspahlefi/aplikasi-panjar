@@ -38,8 +38,8 @@ class DetailPerkaraController extends Controller
         $item->uraian = $request->uraian;
         $item->tgl_transaksi = $request->tgl_transaksi;
         $item->pihak = $request->pihak;
-        $item->pemasukan = $request->pemasukan;
-        $item->pengeluaran = $request->pengeluaran;
+        $item['pemasukan']= Str::of($request->pemasukan)->replace('.', '');
+        $item['pengeluaran']= Str::of($request->pengeluaran)->replace('.', '');
         $item->keterangan = $request->keterangan;
         $item->save();
         return redirect(route('perkara.show',$item->perkara_id));

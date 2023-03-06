@@ -106,7 +106,7 @@
                                                     <input class="form-control" type="text" id="tergugat" name="tergugat" placeholder="Default input" aria-label="default input example">
                                                 </div>
                                                 <div class="col-6">
-                                                    <p class="fs-5 my-auto mx-auto">Status Perkara</p>
+                                                    <p class="fs-5 my-auto mx-auto">Perkara Tingkat</p>
                                                 </div>
                                                 <div class="col-6">
                                                     <input class="form-control" type="text" id="status_perkara" name="status_perkara" placeholder="Default input" aria-label="default input example">

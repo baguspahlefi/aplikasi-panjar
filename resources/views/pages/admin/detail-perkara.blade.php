@@ -124,13 +124,13 @@
                                                     <p class="fs-5 my-auto mx-auto">Pemasukan</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input id="dengan-rupiah-1" class="form-control" type="text" id="pemasukan" name="pemasukan" placeholder="pemasukan" aria-label="default input example">
+                                                    <input id="rupiah" class="form-control" type="text" id="pemasukan" name="pemasukan" placeholder="Masukan 0 jika tidak ada pemasukan" aria-label="default input example" required>
                                                 </div>
                                                 <div class="col-6">
                                                     <p class="fs-5 my-auto mx-auto">Pengeluaran</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input id="dengan-rupiah-2" class="form-control" type="text" id="pengeluaran" name="pengeluaran" placeholder="Pemasukan" aria-label="default input example">
+                                                    <input id="rupiah-2" class="form-control" type="text" id="pengeluaran" name="pengeluaran" placeholder="Masukan 0 jika tidak ada pengeluaran" aria-label="default input example" required>
                                                 </div>
                                                 <div class="col-6">
                                                     <p class="fs-5 my-auto mx-auto">Keterangan</p>
