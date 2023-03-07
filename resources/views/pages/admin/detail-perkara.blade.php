@@ -231,8 +231,8 @@
                                             @endphp
                                 
                                         </td>
-                                        <td class="text-primary text-center">
-                                            <a href="#">Bukti Transfer</a>
+                                        <td> 
+                                            <img src="{{Storage::url($detail_data->bukti_transfer)}}" alt="" width="150" class="img-thumbnail" data-mdb-img="{{Storage::url($item->ktp)}}">
                                         </td>
                                         <td class="text-primary text-center">
                                             <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modaltransfer">

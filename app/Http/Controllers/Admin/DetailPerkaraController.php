@@ -52,9 +52,9 @@ class DetailPerkaraController extends Controller
             'assets/gallery','public'
         );
         $perkara_tabel->bukti_transfer = $bukti_transfer_id;
-        $perkara_tabel->save();
+        PerkaraTabel::where('perkara_id',$id)->update(array('bukti_transfer' => $bukti_transfer_id));
+
         return redirect(route('perkara.show',$id));
-        
     }
 
     /**
