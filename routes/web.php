@@ -27,6 +27,7 @@ Route::post('/ajukan-panjar', [App\Http\Controllers\AjukanPanjarController::clas
 
 //Pantau Panjar
 Route::get('/pantau-panjar', [App\Http\Controllers\PantauPanjarController::class, 'index'])
+->middleware(['auth','submit'])
 ->name('pantauPanjar');
 
 //Detail Panjar

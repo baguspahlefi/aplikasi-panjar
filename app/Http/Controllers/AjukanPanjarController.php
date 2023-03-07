@@ -44,7 +44,8 @@ class AjukanPanjarController extends Controller
         );
         
         AjukanPanjarTabel::create($data);
-        
+
+        User::where('email',$user)->update(array('status' => 'true'));
         
         return view('pages.success-input');
     }
