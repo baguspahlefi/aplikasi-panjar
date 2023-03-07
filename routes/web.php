@@ -42,8 +42,6 @@ Route::get('/admin', [App\Http\Controllers\Admin\HomeController::class, 'index']
 
 Route::post('/admin/form', [App\Http\Controllers\Admin\HomeController::class, 'store'])
 ->middleware(['auth','admin'])
-
-->middleware(['auth','admin'])
 ->name('perkara.store');
 
 Route::delete('/admin/delete/{id}', [App\Http\Controllers\Admin\HomeController::class, 'destroy'])
