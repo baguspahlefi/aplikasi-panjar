@@ -25,7 +25,8 @@ class PerkaraDetailTabel extends Model
         'pihak',
         'pemasukan',
         'pengeluaran',
-        'keterangan'
+        'keterangan',
+        'bukti_transfer'
     ];
 
     public function perkara_tabel()

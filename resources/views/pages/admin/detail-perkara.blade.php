@@ -161,7 +161,7 @@
                                             <th rowspan="2" class="col text-center">Pihak</th>
                                             <th colspan="3" class="col text-center">Nominal</th>
                                             <th rowspan="2" class="col text-center">Keterangan</th>
-                                            <th rowspan="2">Aksi</th>
+                                            <th rowspan="2" class="col text-center">Aksi</th>
                                             <tr>
                                                 <th class="text-center">Pemasukan</th>
                                                 <th class="text-center">Pengeluaran</th>
@@ -234,6 +234,36 @@
                                         <td class="text-primary text-center">
                                             <a href="#">Bukti Transfer</a>
                                         </td>
+                                        <td class="text-primary text-center">
+                                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modaltransfer">
+                                                Upload bukti transfer
+                                            </button>
+                                        </td>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="modaltransfer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Upload bukti transfer</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                <div class="input-group mb-3">
+                                                    <form action="#" method="post" enctype="multipart/form-data">
+                                                        @csrf
+                                                        <input type="file" class="form-control" id="inputGroupFile02">
+                                                        <label class="input-group-text" for="inputGroupFile02">Upload</label>  
+                                                </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                        <button type="submit" class="btn btn-success">Simpan</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
                                         
                                     </tfoot>
                                     
