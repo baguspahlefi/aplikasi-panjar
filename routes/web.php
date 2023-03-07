@@ -32,7 +32,7 @@ Route::get('/pantau-panjar', [App\Http\Controllers\PantauPanjarController::class
 
 //Detail Panjar
 Route::get('/detail-panjar/{id}', [App\Http\Controllers\PantauPanjarController::class, 'show'])
-->middleware(['auth'])
+->middleware(['auth','submit'])
 ->name('detailPanjar.show');
 
 ///////// Admin //////////
