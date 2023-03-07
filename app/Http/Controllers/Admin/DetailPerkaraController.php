@@ -45,12 +45,15 @@ class DetailPerkaraController extends Controller
         return redirect(route('perkara.show',$item->perkara_id));
     }
 
-    public function upload_bukti_transfer(Request $request)
+    public function upload_bukti_transfer(Request $request, PerkaraTabel $perkara_tabel)
     {
-        $data['bukti_transfer'] = $request->file('bukti_transfer')->store(
+        $id = $request->perkara_id;
+        $bukti_transfer_id =  $request->file('bukti_transfer')->store(
             'assets/gallery','public'
         );
-
+        $perkara_tabel->bukti_transfer = $bukti_transfer_id;
+        $perkara_tabel->save();
+        return redirect(route('perkara.show',$id));
         
     }
 

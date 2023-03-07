@@ -63,7 +63,9 @@ Route::get('/admin/data-penggugat', [App\Http\Controllers\Admin\DataPenggugatCon
 ->middleware(['auth','admin'])
 ->name('dataPenggugat');
 
-
+Route::put('/admin/detail-perkara/{id}', [App\Http\Controllers\Admin\DetailPerkaraController::class, 'upload_bukti_transfer'])
+->middleware(['auth','admin'])
+->name('bukti_transfer.update');
 
 Route::post('/admin/detail-perkara', [App\Http\Controllers\Admin\DetailPerkaraController::class, 'store'])
 ->middleware(['auth','admin'])

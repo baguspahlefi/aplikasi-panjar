@@ -250,10 +250,14 @@
                                                 </div>
                                                 <div class="modal-body">
                                                 <div class="input-group mb-3">
-                                                    <form action="#" method="post" enctype="multipart/form-data">
+                                                    <form action="{{route('bukti_transfer.update',$item->perkara_id)}}" method="POST" enctype="multipart/form-data">
                                                         @csrf
-                                                        <input type="file" class="form-control" id="inputGroupFile02">
-                                                        <label class="input-group-text" for="inputGroupFile02">Upload</label>  
+                                                        @method('put')
+                                                        <div class="col-6 d-none">
+                                                            <input class="form-control" type="text" id="perkara_id" name="perkara_id" value="{{$item->perkara_id}}" placeholder="Default input" aria-label="default input example">
+                                                        </div>
+                                                        <input type="file" class="form-control" id="bukti_transfer" name="bukti_transfer">
+                                                        <label class="input-group-text" for="bukti_transfer">Upload</label>  
                                                 </div>
                                                 </div>
                                                 <div class="modal-footer">
