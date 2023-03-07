@@ -17,21 +17,23 @@
                 <div class="col-12" style="overflow-x: auto;">
                     <table id="tabel" class="table table-bordered border-light">
                         <tr>
-                          <th>No</th>
-                          <th class="col text-center">Nomor Perkara</th>
-                          <th class="col text-center">Tanggal</th>
-                          <th class="col text-center">Penggugat</th>
-                          <th class="col text-center">Tergugat</th>
-                          <th class="col text-center">Status Perkara</th>
-                        </tr>
+                            <th>No</th>
+                            <th class="col text-center">Nomor Perkara</th>
+                            <th class="col text-center">Klasifikasi</th>
+                            <th class="col text-center">Tanggal</th>
+                            <th class="col text-center">Penggugat</th>
+                            <th class="col text-center">Tergugat</th>
+                            <th class="col text-center">Perkara Tingkat</th>
+                        </tr>    
                         <tr>
-                          <td class="text-center">1</td>
-                          <td class="text-center">1/G/2023/PTUN.BL</td>
-                          <td class="text-center">17 Januari 2022</td>
-                          <td class="text-center">Zaenal Abidin</td>
-                          <td class="text-center">Kantor Badan Pertanahan Nasional (BPN) Kabupaten Pesawaran </td>
-                          <td class="text-center">Pemeriksaan Perkara</td>
-                      </tr>
+                            <td class="text-center">{{$item->perkara_id}}</td>
+                            <td class="text-center">{{$item->nomor_perkara}} </td>
+                            <td class="text-center">{{$item->klasifikasi}}</td>
+                            <td class="text-center">{{$item->tgl_pendaftaran}}</td>
+                            <td class="text-center">{{$item->penggugat}}</td>
+                            <td class="text-center">{{$item->tergugat}} </td>
+                            <td class="text-center">{{$item->perkara_tingkat}}</td>
+                        </tr>
                     </table>
                 </div>
             </div>
@@ -54,42 +56,59 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php
+                            $totalPemasukan = 0;
+                            $totalPengeluaran = 0;
+                            ?>
+                            @foreach($detail as $detail_data)
+                            @if($detail_data->perkara_id == $item->perkara_id)
                             <tr>
-                                <td class="text-center">1</td>
-                                <td class="text-center">Rabu, 04 Jan. 2023</td>
-                                <td class="text-center">Panjar Biaya Perkara</td>
-                                <td class="text-center">Penggugat</td>
-                                <td class="text-center">Rp. 710.000 </td>
+                                <td class="text-center">{{$loop->iteration}}</td>
+                                <td class="text-center">{{$detail_data->tgl_transaksi}}</td>
+                                <td class="text-center">{{$detail_data->uraian}}</td>
+                                <td class="text-center">{{$detail_data->pihak}}</td>
+                                <td class="text-center">
+                                    Rp.
+                                    @php
+                                    echo number_format("$detail_data->pemasukan")."<br>";
+                                    @endphp   
+                                </td>
+                                <td class="text-center"> Rp.
+                                    @php
+                                    echo number_format("$detail_data->pengeluaran")."<br>";
+                                    @endphp</td>
                                 <td class="text-center"></td>
-                                <td class="text-center">Rp. 710.000</td>
-                                <td class="text-center"></td>
+                                <td class="text-center">{{$detail_data->keterangan}}</td>
                             </tr>
-                            <tr>
-                                <td class="text-center">2</td>
-                                <td class="text-center">Rabu, 04 Jan. 2023</td>
-                                <td class="text-center">Biaya Pendaftaran/ PNPB</td>
-                                <td class="text-center">Bagus Pahlefi</td>
-                                <td class="text-center"> </td>
-                                <td class="text-center">Rp. 30.000</td>
-                                <td class="text-center">Rp. 680.000</td>
-                                <td class="text-center"></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">3</td>
-                                <td class="text-center">Rabu, 04 Jan. 2023</td>
-                                <td class="text-center">Biaya Pendaftaran/ PNPB</td>
-                                <td class="text-center">Bagus Pahlefi</td>
-                                <td class="text-center"> </td>
-                                <td class="text-center">Rp. 30.000</td>
-                                <td class="text-center">Rp. 680.000</td>
-                                <td class="text-center"></td>
-                            </tr>
+                            <?php
+                            $totalPemasukan += $detail_data->pemasukan;
+                            $totalPengeluaran += $detail_data->pengeluaran;
+                            ?>
+                            @endif
+                            @endforeach
                         </tbody>
                         <tfoot>
                             <td colspan="4" class="text-dark fw-bold text-center">Total</td>
-                            <td class="text-dark fw-bold text-center">Rp. 710.000</td>
-                            <td class="text-dark fw-bold text-center">Rp. 710.000</td>
-                            <td class="text-dark fw-bold text-center">0</td>
+                            <td class="text-dark fw-bold text-center">
+                                Rp.
+                                @php
+                                echo number_format("$totalPemasukan")."<br>";
+                                @endphp
+                            </td>
+                            <td class="text-dark fw-bold text-center">
+                                Rp.
+                                @php
+                                echo number_format("$totalPengeluaran")."<br>";
+                                @endphp
+                            
+                            </td>
+                            <td class="text-dark fw-bold text-center">
+                                Rp.
+                                @php
+                                echo number_format("$totalPemasukan"-"$totalPengeluaran")."<br>";
+                                @endphp
+                    
+                            </td>
                             <td class="text-primary text-center">
                                 <a href="#">Bukti Transfer</a>
                             </td>

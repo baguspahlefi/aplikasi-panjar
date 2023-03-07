@@ -71,7 +71,7 @@
                                                     <p class="fs-5 my-auto mx-auto">Nomor Perkara</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input class="form-control" type="text" id="nomor_perkara" name="nomor_perkara" placeholder="Default input" aria-label="default input example">
+                                                    <input class="form-control" type="text" id="nomor_perkara" name="nomor_perkara" placeholder="Nomor Perkara" aria-label="default input example">
                                                 </div>
                                                 <div class="col-6">
                                                     <p class="fs-5 my-auto mx-auto">Tanggal Pendaftaran</p>
@@ -83,31 +83,31 @@
                                                     <p class="fs-5 my-auto mx-auto">Klasifikasi Perkara</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input class="form-control" type="text" id="klasifikasi" name="klasifikasi" placeholder="Default input" aria-label="default input example">
+                                                    <input class="form-control" type="text" id="klasifikasi" name="klasifikasi" placeholder="Klasifikasi Perkara" aria-label="default input example">
                                                 </div>
                                                 <div class="col-6">
                                                     <p class="fs-5 my-auto mx-auto">Penggugat</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input class="form-control" type="text" id="penggugat" name="penggugat" placeholder="Default input" aria-label="default input example">
+                                                    <input class="form-control" type="text" id="penggugat" name="penggugat" placeholder="Penggugat" aria-label="default input example">
                                                 </div>
                                                 <div class="col-6">
-                                                    <p class="fs-5 my-auto mx-auto">No Telepon Penggugat</p>
+                                                    <p class="fs-5 my-auto mx-auto">Email Penggugat</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input class="form-control" type="text" id="no_telepon" name="no_telepon" placeholder="Default input" aria-label="default input example">
+                                                    <input class="form-control" type="email" id="email" name="email" placeholder="Email Penggugat" aria-label="default input example">
                                                 </div>
                                                 <div class="col-6">
                                                     <p class="fs-5 my-auto mx-auto">Tergugat</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input class="form-control" type="text" id="tergugat" name="tergugat" placeholder="Default input" aria-label="default input example">
+                                                    <input class="form-control" type="text" id="tergugat" name="tergugat" placeholder="Tergugat" aria-label="default input example">
                                                 </div>
                                                 <div class="col-6">
                                                     <p class="fs-5 my-auto mx-auto">Perkara Tingkat</p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input class="form-control" type="text" id="perkara_tingkat" name="perkara_tingkat" placeholder="Default input" aria-label="default input example">
+                                                    <input class="form-control" type="text" id="perkara_tingkat" name="perkara_tingkat" placeholder="Perkara Tingkat" aria-label="default input example">
                                                 </div>
                                                 <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

@@ -6,6 +6,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Models\AjukanPanjarTabel;
+use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 
@@ -32,6 +33,7 @@ class AjukanPanjarController extends Controller
      */
     public function store(Request $request)
     {
+        $user = $request->user()->email;
         $data = $request->all();
         $data['ktp'] = $request->file('ktp')->store(
             'assets/gallery','public'
@@ -41,8 +43,9 @@ class AjukanPanjarController extends Controller
             'assets/gallery','public'
         );
         
-
         AjukanPanjarTabel::create($data);
+        
+        
         return view('pages.success-input');
     }
 

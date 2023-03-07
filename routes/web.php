@@ -30,8 +30,9 @@ Route::get('/pantau-panjar', [App\Http\Controllers\PantauPanjarController::class
 ->name('pantauPanjar');
 
 //Detail Panjar
-Route::get('/detail-panjar', [App\Http\Controllers\DetailPanjarController::class, 'index'])
-->name('detailPanjar');
+Route::get('/detail-panjar/{id}', [App\Http\Controllers\PantauPanjarController::class, 'show'])
+->middleware(['auth'])
+->name('detailPanjar.show');
 
 ///////// Admin //////////
 Route::get('/admin', [App\Http\Controllers\Admin\HomeController::class, 'index'])

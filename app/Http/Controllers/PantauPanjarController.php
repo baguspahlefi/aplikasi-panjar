@@ -5,15 +5,23 @@ namespace App\Http\Controllers;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
+use App\Models\PerkaraTabel;
+use App\Models\PerkaraDetailTabel;
 
 class PantauPanjarController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('pages.pantaupanjar');
+        $user = $request->user()->email;
+        $items = PerkaraTabel::all()->where('email',$user);
+       
+        return view('pages.pantaupanjar',
+        [ 'items' =>$items]);
     }
 
     /**
@@ -37,7 +45,14 @@ class PantauPanjarController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $item = PerkaraTabel::findOrFail($id);
+       
+        return view('pages.detailpanjar',
+        [ 
+            'item' =>$item, 
+            'detail' => PerkaraDetailTabel::get()
+        ]
+    );
     }
 
     /**

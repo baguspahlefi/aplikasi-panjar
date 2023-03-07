@@ -21,7 +21,7 @@ class PerkaraTabel extends Model
         'klasifikasi',
         'tgl_pendaftaran',
         'penggugat',
-        'no_telepon',
+        'email',
         'tergugat',
         'perkara_tingkat',
         'bukti_transfer'
