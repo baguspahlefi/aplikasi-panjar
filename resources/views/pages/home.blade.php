@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    Index - Aplikasi Panjar
+    SIMPANTAUMULI POP - PTUN BANDAR LAMPUNG
 @endsection
 @section('content')
     <!-- Hero Section  -->
@@ -9,14 +9,13 @@
             <div class="row h-100 ">
                 <div class="col-md-6 my-auto">
                     <h3 class="hero text-uppercase text-light">
-                        Simplifikasi Pengembalian dan Pemantauan Panjar pada Pengadilan Tata Usaha Negara Bandar Lampung
+                    SIMPANTAUMULI POP
                     </h3>
-                    <h4 class="font-weight-normal text-light">
-                        In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
-                        used to demonstrate the visual form of a 
-                    </h4>
+                    <h4 class="hero text-uppercase text-light">
+                    Simplifikasi Pemantauan dan Pengembalian Sisa Panjar Ongkos Perkara pada Pengadilan Tata Usaha Negara Bandar Lampung
+                    </h3>
                     <a href=" {{route('ajukanPanjar')}} ">
-                        <button class="btn btn-panjar">Form Adminitrasi</button>
+                        <button class="btn btn-panjar">Form Administrasi</button>
                     </a>
                     <a href=" {{route('pantauPanjar')}} ">
                         <button class="btn btn-panjar mx-4">Pantau Panjar</button>
@@ -24,7 +23,7 @@
                 </div>
             </div>
 
-            <img src="images/Home.png" class="hero-image position-absolute end-0 bottom-0" width="400" alt="">
+            <img src="images/Home.png" class="hero-image position-absolute end-0 bottom-0" height="600" width="600" alt="">
         </div>
     </section>
 
@@ -39,13 +38,15 @@
             <div class="row mt-4">
                 <div class="col-md-6 col-sm-12 text-dark">
                     <h2 style="width: 80%;" class="my-auto">
-                        Better Solutions For 
-                        Your Business
+                        Sekilas Tentang
+                        SIMPANTAUMULI POP
                     </h2>
 
-                    <h4 class="font-weight-normal ">
-                        In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
-                        used to demonstrate the visual form of a 
+                    <h4 class="font-weight-small ">
+                    Berdasarkan Ketentuan SEMA No 4 Tahun 2008 tanggal 13 Juni 2008 tentang Pemungutan Biaya Perkara
+                    "Apabila ada kelebihan biaya perkara yang tidak terpakai dalam proses berperkara, maka biaya tersebut wajib dikembalikan kepada pihak yang berhak"
+                    Bilamana biaya tersebut tidak diambil dalam waktu 6 (enam) bulan setelah pihak yang bersangkutan diberitahu, maka uang lebihan tersebut dikeluarkan dari buku jurnal yang bersangkutan dan dicatat dalam buku tresendiri sebagai uang tak bertuan (1948 KUH Perdata).
+                    Uang tak bertuan tersebut secara berkala disetorkan ke kas negara.
                     </h4>
 
                 </div>

@@ -10,7 +10,7 @@
       >
   <!-- Left -->
   <div class="me-5">
-  <span>Get connected with us on social networks:</span>
+    <tr><span>Hubungi Kami di:</span></td>
   </div>
   <!-- Left -->
 
@@ -47,15 +47,19 @@
       <!-- Grid column -->
       <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <!-- Content -->
-          <h6 class="text-uppercase text-dark fw-bold">Aplikasi Panjar</h6>
+          <h6 class="text-uppercase text-dark fw-bold">SIMPANTAUMULI POP</h6>
           <hr
               class="mb-4 mt-0 d-inline-block mx-auto"
               style="width: 60px; background-color: #7c4dff; height: 2px"
               />
           <p style="color: #3d4444;">
-          Here you can use rows and columns to organize your footer
-          content. Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit.
+          Sebagaimana saran dari responden survei yang dilaksanakan oleh
+          PTUN Bandar Lampung, telah dibuat penyederhanaan berupa aplikasi
+          Pemantauan dan Pengembalian Sisa Panjar Biaya Perkara, sehingga pihak
+          dapat memantau dan mendapatkan notifikasi terhadap panjar biaya perkara
+          apabila perkara telah putus. Sehingga pihak tidak perlu lagi datang ke pengadilan
+          untuk mengambil sisa panjar ongkos perkara dan apabila sisa panjar tersebut telah disetorkan
+          maka pihak dapat melihat bukti transfer melalui aplikasi tersebut.
           </p>
       </div>
       <!-- Grid column -->
@@ -64,7 +68,7 @@
       <!-- Grid column -->
       <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <!-- Links -->
-          <h6 class="text-uppercase fw-bold text-dark">Contact</h6>
+          <h6 class="text-uppercase fw-bold text-dark">KONTAK KAMI</h6>
           <hr
               class="mb-4 mt-0 d-inline-block mx-auto"
               style="width: 60px; background-color: #7c4dff; height: 2px"
@@ -85,7 +89,7 @@
       class="text-center text-dark p-3"
       style="background-color: rgba(0, 0, 0, 0.2)">
       © 2023 Copyright:
-      <a class="text-dark text-decoration-none" href="#">AlBaGas</a>
+      <a class="text-dark text-decoration-none" href="#">PTUN Bandar Lampung</a>
   </div>
   <!-- Copyright -->
 </footer>
