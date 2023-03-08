@@ -23,6 +23,8 @@ class AjukanPanjarTabel extends Model
         'email',
         'no_perkara',
         'no_rekening',
+        'jenis_bank',
+        'jenis_perkara',
         'ktp',
         'kta'
     ];

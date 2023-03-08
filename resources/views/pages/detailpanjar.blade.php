@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    Detail Panjar - Aplikasi Panjar
+    Detail Panjar - SIMPANTAUMULI POP
 @endsection
 @section('content')
     <!-- Section input  -->

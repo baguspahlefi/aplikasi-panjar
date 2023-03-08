@@ -9,7 +9,7 @@
             <div class="row" style="margin-top: 15vh">
                 <div class="col-12 text-center">
                     <h3 class="text-dark">
-                        Form Pengajuan Panjar
+                        Form Administrasi Panjar Perkara
                     </h3>
                 </div>
             </div>
@@ -45,6 +45,12 @@
                     <div class="mb-3 mt-4">
                         <label for="exampleFormControlInput1" class="form-label text-dark">Nomor Rekening</label>
                         <input type="form-control" name="no_rekening" class="form-control" id="exampleFormControlInput1" placeholder="Nomor Rekening" required>
+                    </div>
+                </div>
+                <div class="col-md-4 my-auto">
+                    <div class="mb-3 mt-4">
+                        <label for="exampleFormControlInput1" class="form-label text-dark">Jenis Bank</label>
+                        <input type="form-control" name="jenis_bank" class="form-control" id="exampleFormControlInput1" placeholder="Jenis Bank" required>
                     </div>
                 </div>
                 <div class="col-md-4 my-auto">

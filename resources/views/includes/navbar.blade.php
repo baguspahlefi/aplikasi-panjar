@@ -7,7 +7,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <h2>Aplikasi Panjar</h2>
+                            <h2>SIMPANTAUMULI POP</h2>
                         </div>
                     </div>
                     <div class="row">

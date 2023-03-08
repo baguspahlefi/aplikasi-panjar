@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('title')
-    Dashboard Admin - Aplikasi Panjar
+    Dashboard Admin - SIMPANTAUMULI POP
 @endsection
 @section('content')
     <div id="layoutSidenav">
@@ -60,6 +60,7 @@
                                         <th>Nomer Telepon</th>
                                         <th>Email</th>
                                         <th>Nomor Rekening</th>
+                                        <th>Jenis Bank</th>
                                         <th>Gambar KTP</th>
                                         <th>Gambar KTA</th>
                                     </tr>
@@ -74,6 +75,7 @@
                                         <td>{{ $item->no_telepon }}</td>
                                         <td>{{ $item->email }}</td>
                                         <td>{{ $item->no_rekening }}</td>
+                                        <td>{{ $item->jenis_bank }}</td>
                                         <td> 
                                             <img src="{{Storage::url($item->ktp)}}" alt="" width="150" class="img-thumbnail" data-mdb-img="{{Storage::url($item->ktp)}}">
                                         </td>
@@ -108,7 +110,7 @@
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
                     <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Aplikasi Panjar 2023</div>
+                        <div class="text-muted">Copyright &copy; Aplikasi Pemantauan dan Pengembalian Sisa Panjar Perkara 202</div>
                     </div>
                 </div>
             </footer>

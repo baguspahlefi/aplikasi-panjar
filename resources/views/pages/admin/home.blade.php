@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('title')
-    Dashboard Admin - Aplikasi Panjar
+    Dashboard Admin - SIMPANTAUMULI POP
 @endsection
 @section('content')
     <div id="layoutSidenav">
@@ -46,7 +46,7 @@
                 <div class="container-fluid bg-light ">
                     <div class="row">
                         <div class="col">
-                            <h3 class="mt-4 text-success">Data Pengajuan Perkara</h3>
+                            <h3 class="mt-4 text-success">Data Perkara</h3>
                         </div>
                     </div>
                     <div class="row">
@@ -171,7 +171,7 @@
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
                     <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Aplikasi Panjar 2023</div>
+                        <div class="text-muted">Copyright &copy; Aplikasi Pemantauan dan Pengembalian Sisa Panjar Perkara 2023</div>
                     </div>
                 </div>
             </footer>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    Pantau Panjar - Aplikasi Panjar
+    Pantau Panjar - SIMPANTAUMULI POP
 @endsection
 @section('content')
     <!-- Section input  -->
@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-12" style="margin-top: 15vh">
                     <h2 class="text-dark">
-                        Data Pengajuan Perkara
+                        Data Perkara
                     </h2>
                 </div>
             </div>
