@@ -44,6 +44,14 @@ Route::post('/admin/form', [App\Http\Controllers\Admin\HomeController::class, 's
 ->middleware(['auth','admin'])
 ->name('perkara.store');
 
+Route::get('/admin/form', [App\Http\Controllers\Admin\HomeController::class, 'edit'])
+->middleware(['auth','admin'])
+->name('perkara.edit');
+
+Route::put('/admin/form/{id}', [App\Http\Controllers\Admin\HomeController::class, 'update'])
+->middleware(['auth','admin'])
+->name('perkara.update');
+
 Route::delete('/admin/delete/{id}', [App\Http\Controllers\Admin\HomeController::class, 'destroy'])
 ->middleware(['auth','admin'])
 ->name('perkara.destroy');
@@ -62,6 +70,10 @@ Route::get('/admin/detail-perkara', [App\Http\Controllers\Admin\DetailPerkaraCon
 Route::get('/admin/data-penggugat', [App\Http\Controllers\Admin\DataPenggugatController::class, 'index'])
 ->middleware(['auth','admin'])
 ->name('dataPenggugat');
+
+Route::delete('/admin/data-penggugat/{id}', [App\Http\Controllers\Admin\DataPenggugatController::class, 'destroy'])
+->middleware(['auth','admin'])
+->name('dataPenggugat.destroy');
 
 Route::put('/admin/detail-perkara/{id}', [App\Http\Controllers\Admin\DetailPerkaraController::class, 'upload_bukti_transfer'])
 ->middleware(['auth','admin'])

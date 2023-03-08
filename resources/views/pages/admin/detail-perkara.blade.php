@@ -198,7 +198,7 @@
                                                     class="d-inline">
                                                     @csrf
                                                     @method('delete')
-                                                    <button type="submit" class="btn btn-link">Delete</button>
+                                                    <button type="submit" class="btn btn-danger">Delete</button>
                                             </form>
                                             </td>
                                         </tr>
@@ -231,7 +231,7 @@
                                             @endphp
                                 
                                         </td>
-                                        <td> 
+                                        <td class="text-center"> 
                                             <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalDetailBuktiTransfer">
                                                 Lihat Bukti Transfer
                                             </button>

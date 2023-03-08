@@ -63,6 +63,7 @@
                                         <th>Jenis Bank</th>
                                         <th>Gambar KTP</th>
                                         <th>Gambar KTA</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
 
@@ -81,6 +82,14 @@
                                         </td>
                                         <td>
                                             <img src="{{Storage::url($item->kta)}}" alt="" width="150" class="img-thumbnail">
+                                        </td>
+                                        <td>
+                                            <form action="{{route('dataPenggugat.destroy',$item->ajukan_panjar_id)}}" method="POST"
+                                                class="d-inline">
+                                                @csrf
+                                                @method('delete')
+                                                <button type="submit" class="btn btn-danger">Delete</button>
+                                            </form>
                                         </td>
                                     </tr>
                                     @empty

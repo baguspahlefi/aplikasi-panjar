@@ -54,7 +54,13 @@ class HomeController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $row = PerkaraTabel::findOrFail($id);
+
+        return view('pages.admin.home',
+        [
+            ['row' => $row]
+        ]);
+
     }
 
     /**
@@ -62,15 +68,20 @@ class HomeController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = $request->all();
+        
+        $item = PerkaraTabel::findOrFail($id);
+        $item->update($data);
+        return redirect()->route('homeAdmin');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(PerkaraTabel $id)
+    public function destroy($id)
     {
-        $id->delete();
+        $item = PerkaraTabel::findOrFail($id);
+        $item->delete();
         sleep(1);
         return redirect()->route('homeAdmin');
     }

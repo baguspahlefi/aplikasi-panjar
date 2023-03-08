@@ -147,16 +147,15 @@
                                         <td>{{$perkaraData->penggugat}}</td>
                                         <td>{{$perkaraData->tergugat}}</td>
                                         <td>{{$perkaraData->perkara_tingkat}}</td>
+                                        
                                         <td>
-                                            <a href="#">Edit</a>
-                                            <a href="{{route('perkara.show',$perkaraData->perkara_id)}}">Detail</a>
+                                            <a class="btn btn-success mb-2" href="{{route('perkara.show',$perkaraData->perkara_id)}}">Detail</a>
                                             <form action="{{route('perkara.destroy',$perkaraData->perkara_id)}}" method="POST"
                                                     class="d-inline">
                                                     @csrf
                                                     @method('delete')
-                                                    <button type="submit" class="btn btn-link">Delete</button>
+                                                    <button type="submit" class="btn btn-danger">Delete</button>
                                             </form>
-                                            
                                         </td>
                                     </tr>
                                     @endforeach
@@ -178,3 +177,5 @@
         </div>
     </div>
 @endsection
+
+

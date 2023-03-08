@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;1,200&display=swap");
 * {
   z-index: 2;
 }
@@ -44,11 +45,19 @@ nav h6 {
 #tentang-section {
   color: black;
   background-color: #F8F4FC;
-  padding-top: 15vh;
-  padding-bottom: 20vh;
+  padding-top: 25vh;
+  padding-bottom: 25vh;
 }
 #tentang-section h4 {
   margin-top: 10vh;
+}
+#tentang-section .text-tentang {
+  font-family: "Nunito", sans-serif;
+  font-size: large;
+}
+#tentang-section .text-judul-tentang {
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
 }
 
 #form-input {

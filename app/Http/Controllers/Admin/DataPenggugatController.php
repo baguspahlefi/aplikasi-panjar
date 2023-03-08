@@ -66,8 +66,11 @@ class DataPenggugatController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        $item = AjukanPanjarTabel::findOrFail($id);
+        $item->delete();
+        sleep(1);
+        return redirect()->route('dataPenggugat');
     }
 }

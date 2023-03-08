@@ -32,26 +32,18 @@
         <div class="container w-100">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h3 class="text-dark">Tentang Panjar</h3>
+                    <h3 class="text-dark text-judul-tentang">Sekilas Tentang
+                        SIMPANTAUMULI POP</h3>
                 </div>
             </div>
             <div class="row mt-4">
-                <div class="col-md-6 col-sm-12 text-dark">
-                    <h2 style="width: 80%;" class="my-auto">
-                        Sekilas Tentang
-                        SIMPANTAUMULI POP
-                    </h2>
-
-                    <h4 class="font-weight-small ">
+                <div class="col-md-12 col-sm-12 text-dark">
+                    <h5 class="font-small text-center text-tentang">
                     Berdasarkan Ketentuan SEMA No 4 Tahun 2008 tanggal 13 Juni 2008 tentang Pemungutan Biaya Perkara
                     "Apabila ada kelebihan biaya perkara yang tidak terpakai dalam proses berperkara, maka biaya tersebut wajib dikembalikan kepada pihak yang berhak"
-                    Bilamana biaya tersebut tidak diambil dalam waktu 6 (enam) bulan setelah pihak yang bersangkutan diberitahu, maka uang lebihan tersebut dikeluarkan dari buku jurnal yang bersangkutan dan dicatat dalam buku tresendiri sebagai uang tak bertuan (1948 KUH Perdata).
+                    Bilamana biaya tersebut tidak diambil dalam waktu 6 (enam) bulan setelah pihak yang bersangkutan diberitahu, maka uang kelebihan tersebut dikeluarkan dari buku jurnal yang bersangkutan dan dicatat dalam buku tersendiri sebagai uang tak bertuan (1948 KUH Perdata).
                     Uang tak bertuan tersebut secara berkala disetorkan ke kas negara.
-                    </h4>
-
-                </div>
-                <div class="col-md-6 col-sm-12 my-auto d-flex justify-content-end">
-                    <img src="images/tentang.png" width="400" alt="">
+                    </h5>
                 </div>
             </div>
         </div>
