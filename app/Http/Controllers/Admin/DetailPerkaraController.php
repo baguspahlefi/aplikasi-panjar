@@ -6,8 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use App\Models\PerkaraTabel;
 use Illuminate\Support\Str;
+use App\Models\PerkaraTabel;
 use App\Models\PerkaraDetailTabel;
 
 class DetailPerkaraController extends Controller
