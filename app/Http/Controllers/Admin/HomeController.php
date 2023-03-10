@@ -54,14 +54,14 @@ class HomeController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Request $request, $id)
     {
-        $row = PerkaraTabel::findOrFail($id);
+        if ($request->isMethod('post')) {
+            $item = $request->except(['_token', '_method']);
 
-        return view('pages.admin.home',
-        [
-            ['row' => $row]
-        ]);
+            PerkaraTabel::where('perkara_id', $id)->update($item);
+            return redirect()->back();
+        }
 
     }
 
@@ -71,11 +71,6 @@ class HomeController extends Controller
     public function update(Request $request, PerkaraTabel $perkara_tabel)
     {
 
-        $id = $request->perkara_id;
-        $item = PerkaraTabel::findOrFail($id);
-        $item = $request->all();
-        $item->update();
-        return redirect()->route('homeAdmin');
     }
 
     /**
