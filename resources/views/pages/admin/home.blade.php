@@ -119,6 +119,75 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Modal Edit-->
+                            <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title text-center fs-5" id="editModalLabel">Edit Perkara</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+   
+                                        <div class="modal-body">
+                                            <form action="" method="POST" enctype="multipart/form-data" class="row g-3">
+                                            @csrf
+                                            @method('put')
+                                                <div class="col-6">
+                                                    <input class="form-control" type="text" id="perkara_id" name="perkara_id" value="" placeholder="Default input" aria-label="default input example" disabled>
+                                                </div>
+                                                <div class="col-6">
+                                                    <p class="fs-5 my-auto mx-auto">Nomor Perkara</p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <input class="form-control" type="text" id="nomor_perkara" name="nomor_perkara" value="" placeholder="Nomor Perkara" aria-label="default input example">
+                                                </div>
+                                                <div class="col-6">
+                                                    <p class="fs-5 my-auto mx-auto">Tanggal Pendaftaran</p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <input type="date" name="tgl_pendaftaran" id="tgl_pendaftaran" class="form-control" required>
+                                                </div>
+                                                <div class="col-6">
+                                                    <p class="fs-5 my-auto mx-auto">Klasifikasi Perkara</p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <input class="form-control" type="text" id="klasifikasi" name="klasifikasi" placeholder="Klasifikasi Perkara" aria-label="default input example">
+                                                </div>
+                                                <div class="col-6">
+                                                    <p class="fs-5 my-auto mx-auto">Penggugat</p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <input class="form-control" type="text" id="penggugat" name="penggugat" placeholder="Penggugat" aria-label="default input example">
+                                                </div>
+                                                <div class="col-6">
+                                                    <p class="fs-5 my-auto mx-auto">Email Penggugat</p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <input class="form-control" type="email" id="email" name="email" placeholder="Email Penggugat" aria-label="default input example">
+                                                </div>
+                                                <div class="col-6">
+                                                    <p class="fs-5 my-auto mx-auto">Tergugat</p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <input class="form-control" type="text" id="tergugat" name="tergugat" placeholder="Tergugat" aria-label="default input example">
+                                                </div>
+                                                <div class="col-6">
+                                                    <p class="fs-5 my-auto mx-auto">Perkara Tingkat</p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <input class="form-control" type="text" id="perkara_tingkat" name="perkara_tingkat" placeholder="Perkara Tingkat" aria-label="default input example">
+                                                </div>
+                                                <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-success">Simpan</button>
+                                        </div>
+                                              </form>
+                                        </div>
+                                      
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
@@ -149,7 +218,10 @@
                                         <td>{{$perkaraData->perkara_tingkat}}</td>
                                         
                                         <td>
-                                            <a class="btn btn-success mb-2" href="{{route('perkara.show',$perkaraData->perkara_id)}}">Detail</a>
+                                            <a class="btn btn-success" href="{{route('perkara.show',$perkaraData->perkara_id)}}">Detail</a>
+                                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal">
+                                                Edit
+                                            </button>
                                             <form action="{{route('perkara.destroy',$perkaraData->perkara_id)}}" method="POST"
                                                     class="d-inline">
                                                     @csrf

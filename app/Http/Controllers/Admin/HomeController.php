@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Models\PerkaraTabel;
 use App\Models\PerkaraDetailTabel;
+use DB;
 
 class HomeController extends Controller
 {
@@ -16,6 +17,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        
         return view('pages.admin.home', ['title' => 'Halaman Utama',
     'perkara' => PerkaraTabel::orderBy('tgl_pendaftaran')->get()]);
     }
@@ -66,12 +68,13 @@ class HomeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, PerkaraTabel $perkara_tabel)
     {
-        $data = $request->all();
-        
+
+        $id = $request->perkara_id;
         $item = PerkaraTabel::findOrFail($id);
-        $item->update($data);
+        $item = $request->all();
+        $item->update();
         return redirect()->route('homeAdmin');
     }
 
@@ -81,8 +84,15 @@ class HomeController extends Controller
     public function destroy($id)
     {
         $item = PerkaraTabel::findOrFail($id);
+        DB::delete('delete from perkara_detail_tabel where perkara_id = ?', [$id]);
         $item->delete();
         sleep(1);
         return redirect()->route('homeAdmin');
+
+        $item = TravelPackage::findOrFail($id);
+        $item->delete();
+        
+        sleep(1);
+        return redirect('admin/travelpackage');
     }
 }

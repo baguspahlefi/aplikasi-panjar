@@ -44,11 +44,11 @@ Route::post('/admin/form', [App\Http\Controllers\Admin\HomeController::class, 's
 ->middleware(['auth','admin'])
 ->name('perkara.store');
 
-Route::get('/admin/form', [App\Http\Controllers\Admin\HomeController::class, 'edit'])
+Route::get('/admin/edit', [App\Http\Controllers\Admin\HomeController::class, 'edit'])
 ->middleware(['auth','admin'])
 ->name('perkara.edit');
 
-Route::put('/admin/form/{id}', [App\Http\Controllers\Admin\HomeController::class, 'update'])
+Route::put('/admin/{id}', [App\Http\Controllers\Admin\HomeController::class, 'update'])
 ->middleware(['auth','admin'])
 ->name('perkara.update');
 
