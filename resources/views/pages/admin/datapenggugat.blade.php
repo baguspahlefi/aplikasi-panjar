@@ -84,31 +84,43 @@
                                             <img src="{{Storage::url($item->kta)}}" alt="" width="150" class="img-thumbnail">
                                         </td>
                                         <td>
+                                            <button type="button" class="btn btn-success my-2" data-bs-toggle="modal" data-bs-target="#exampleModal-{{$item->ajukan_panjar_id}}">
+                                                Edit
+                                            </button>
+
                                             <form action="{{route('dataPenggugat.destroy',$item->ajukan_panjar_id)}}" method="POST"
                                                 class="d-inline">
                                                 @csrf
                                                 @method('delete')
                                                 <button type="submit" class="btn btn-danger">Delete</button>
                                             </form>
+                                           
                                         </td>
                                     </tr>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal-{{$item->ajukan_panjar_id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                             {{$item->ajukan_panjar_id}}
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-success">Simpan Perubahan</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+
                                     @empty
                                         
                                     @endforelse
                                 </tbody>
-
-                                <tfoot>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Nomor Perkara</th>
-                                        <th>Klasifikasi Perkara</th>
-                                        <th>Pengguggat</th>
-                                        <th>Tergugat</th>
-                                        <th>Prodeo</th>
-                                        <th>Proses Terakhir</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </tfoot>
                                 
                             </table>
                         </div>
@@ -119,12 +131,14 @@
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
                     <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Aplikasi Pemantauan dan Pengembalian Sisa Panjar Perkara 202</div>
+                        <div class="text-muted">Copyright &copy; Aplikasi Pemantauan dan Pengembalian Sisa Panjar Perkara 2023</div>
                     </div>
                 </div>
             </footer>
         </div>
     </div>
 
+
+ 
     
 @endsection

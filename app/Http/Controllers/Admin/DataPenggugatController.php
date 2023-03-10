@@ -50,9 +50,14 @@ class DataPenggugatController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Request $request,$id)
     {
-        //
+        if ($request->isMethod('post')) {
+            $item = $request->all();
+
+            AjukanPanjarTabel::where(['ajukan_panjar_id',$id])->update($item);
+            return redirect()->back();
+        }
     }
 
     /**

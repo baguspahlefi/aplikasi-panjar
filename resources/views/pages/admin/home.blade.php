@@ -110,10 +110,10 @@
                                                     <input class="form-control" type="text" id="perkara_tingkat" name="perkara_tingkat" placeholder="Perkara Tingkat" aria-label="default input example">
                                                 </div>
                                                 <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <button type="submit" class="btn btn-success">Simpan</button>
-                                        </div>
-                                              </form>
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success">Simpan</button>
+                                                </div>
+                                            </form>
                                         </div>
                                       
                                     </div>

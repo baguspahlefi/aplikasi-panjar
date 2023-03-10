@@ -71,6 +71,10 @@ Route::get('/admin/data-penggugat', [App\Http\Controllers\Admin\DataPenggugatCon
 ->middleware(['auth','admin'])
 ->name('dataPenggugat');
 
+Route::match(['get','post'],'/admin/data-penggugat/{id}', [App\Http\Controllers\Admin\DataPenggugatController::class, 'edit'])
+->middleware(['auth','admin'])
+->name('dataPenggugat.edit');
+
 Route::delete('/admin/data-penggugat/{id}', [App\Http\Controllers\Admin\DataPenggugatController::class, 'destroy'])
 ->middleware(['auth','admin'])
 ->name('dataPenggugat.destroy');
