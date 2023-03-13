@@ -52,12 +52,48 @@ class DataPenggugatController extends Controller
      */
     public function edit(Request $request,$id)
     {
-        if ($request->isMethod('post')) {
-            $item = $request->all();
+        $item = AjukanPanjarTabel::findOrFail($id);
+        
+        $data = $request->all();
 
-            AjukanPanjarTabel::where(['ajukan_panjar_id',$id])->update($item);
-            return redirect()->back();
+        if($request->hasFile('ktp')){
+            
+            $ktp = $request->ktp;
+            $record = AjukanPanjarTabel::findOrFail($id);
+
+            $file_path = 'storage/assets/gallery/'.$record->ktp;
+            //You can also check existance of the file in storage.
+            if(AjukanPanjarTabel::exists($file_path)) {
+               unlink($file_path); //delete from storage
+               // Storage::delete($file_path); //Or you can do it as well
+            }
+            
+            $destinationPath = 'storage/assets/gallery';
+            $ktpImage = uniqid() . " - " . $ktp->getClientOriginalName();
+            $ktp->move($destinationPath, $ktpImage);
+            $data['ktp'] = "$ktpImage";
         }
+
+        if($request->hasFile('kta')){
+            
+            $kta = $request->kta;
+            $record = AjukanPanjarTabel::find($id);
+
+            $file_path = 'storage/assets/gallery/'.$record->kta;
+            //You can also check existance of the file in storage.
+            if(AjukanPanjarTabel::exists($file_path)) {
+               unlink($file_path); //delete from storage
+               // Storage::delete($file_path); //Or you can do it as well
+            }
+            $destinationPath = 'storage/assets/gallery';
+            $ktaImage = uniqid() . " - " . $kta->getClientOriginalName();
+            $kta->move($destinationPath, $ktaImage);
+            $data['kta'] = "$ktaImage";
+        }
+ 
+        $item->update($data);
+        return redirect()->route('dataPenggugat')->with('flash_message_success','Update Berhasil');
+        
     }
 
     /**

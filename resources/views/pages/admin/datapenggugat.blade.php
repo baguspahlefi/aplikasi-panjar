@@ -44,6 +44,11 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid bg-light ">
+                    @if (session('flash_message_success'))
+                        <div class="alert alert-success mt-4">
+                            {{session('flash_message_success')}}
+                        </div>
+                    @endif
                     <div class="row">
                         <div class="col">
                             <h3 class="mt-4 text-success">Data Penggugat</h3>
@@ -78,10 +83,11 @@
                                         <td>{{ $item->no_rekening }}</td>
                                         <td>{{ $item->jenis_bank }}</td>
                                         <td> 
-                                            <img src="{{Storage::url($item->ktp)}}" alt="" width="150" class="img-thumbnail" data-mdb-img="{{Storage::url($item->ktp)}}">
+                                            
+                                            <img src="{{ url("storage/assets/gallery/{$item->ktp}") }}" alt="" width="150" class="img-thumbnail" data-mdb-img="storage/assets/gallery/{{$item->ktp}}">
                                         </td>
                                         <td>
-                                            <img src="{{Storage::url($item->kta)}}" alt="" width="150" class="img-thumbnail">
+                                            <img src="{{ url("storage/assets/gallery/{$item->kta}") }}" alt="" width="150" class="img-thumbnail">
                                         </td>
                                         <td>
                                             <button type="button" class="btn btn-success my-2" data-bs-toggle="modal" data-bs-target="#exampleModal-{{$item->ajukan_panjar_id}}">
@@ -100,20 +106,75 @@
 
                                     <!-- Modal -->
                                     <div class="modal fade" id="exampleModal-{{$item->ajukan_panjar_id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Tabel Penggugat</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form action="{{route('dataPenggugat.edit',$item->ajukan_panjar_id)}}" method="POST" enctype="multipart/form-data" class="row g-3">
+                                                        @csrf
+                                                        <div class="row">
+                                                            <div class="col-6 mb-3">
+                                                                <label class="fs-5 my-auto mx-auto">Nomor Perkara</label>
+                                                            </div>
+                                                            <div class="col-6 mb-3">
+                                                                <input class="form-control" type="text" id="no_perkara" name="no_perkara" value="{{$item->no_perkara}}" aria-label="default input example">
+                                                            </div>
+                                                            <div class="col-6 mb-3">
+                                                                <p class="fs-5 my-auto mx-auto">Nama Lengkap</p>
+                                                            </div>
+                                                            <div class="col-6 mb-3">
+                                                                <input type="text" name="nama_lengkap" id="nama_lengkap" class="form-control" value="{{$item->nama_lengkap}}">
+                                                            </div>
+                                                            <div class="col-6 mb-3">
+                                                                <p class="fs-5 my-auto mx-auto">Nomer Telepon</p>
+                                                            </div>
+                                                            <div class="col-6 mb-3">
+                                                                <input class="form-control" type="text" id="no_telepon" name="no_telepon" value="{{$item->no_telepon}}" aria-label="default input example">
+                                                            </div>
+                                                            <div class="col-6 mb-3">
+                                                                <p class="fs-5 my-auto mx-auto">Email</p>
+                                                            </div>
+                                                            <div class="col-6 mb-3">
+                                                                <input class="form-control" type="email" id="email" name="email" value="{{$item->email}}" aria-label="default input example">
+                                                            </div>
+                                                            <div class="col-6 mb-3">
+                                                                <p class="fs-5 my-auto mx-auto">Nomer Rekening</p>
+                                                            </div>
+                                                            <div class="col-6 mb-3">
+                                                                <input class="form-control" type="text" id="no_rekening" name="no_rekening" value="{{$item->no_rekening}}" aria-label="default input example">
+                                                            </div>
+                                                            <div class="col-6 mb-3">
+                                                                <p class="fs-5 my-auto mx-auto">Jenis Bank</p>
+                                                            </div>
+                                                            <div class="col-6 mb-3">
+                                                                <input class="form-control" type="text" id="jenis_bank" name="jenis_bank" value="{{$item->jenis_bank}}" aria-label="default input example">
+                                                            </div>
+                                                            <div class="col-6 mb-3">
+                                                                <p class="fs-5 my-auto mx-auto">Gambar KTP</p>
+                                                            </div>
+                                                            <div class="col-6 mb-3">
+                                                                <input type="file" class="form-control" id="ktp" name="ktp">
+                                                            </div>
+                                                            <div class="col-6 mb-3">
+                                                                <p class="fs-5 my-auto mx-auto">Gambar KTA</p>
+                                                            </div>
+                                                            <div class="col-6 mb-3">
+                                                                <input type="file" class="form-control" id="kta" name="kta">
+                                                            </div>
+                                                        </div>
+                                                            
+
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                <button type="submit" class="btn btn-success">Simpan Perubahan</button>
+                                                            </div>
+                                                    </form>
+                                                </div>
+                                            
                                             </div>
-                                            <div class="modal-body">
-                                             {{$item->ajukan_panjar_id}}
-                                            </div>
-                                            <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-success">Simpan Perubahan</button>
-                                            </div>
-                                        </div>
                                         </div>
                                     </div>
 
