@@ -35,13 +35,20 @@ class AjukanPanjarController extends Controller
     {
         $user = $request->user()->email;
         $data = $request->all();
-        $data['ktp'] = $request->file('ktp')->store(
-            'assets/gallery','public'
-        );
+
+        if ($ktp = $request->file('ktp')) {
+            $destinationPath = 'storage/assets/gallery';
+            $ktpImage = uniqid() . " - " . $ktp->getClientOriginalName();
+            $ktp->move($destinationPath, $ktpImage);
+            $data['ktp'] = "$ktpImage";
+        }
         
-        $data['kta'] = $request->file('kta')->store(
-            'assets/gallery','public'
-        );
+        if ($kta = $request->file('kta')) {
+            $destinationPath = 'storage/assets/gallery';
+            $ktaImage = uniqid() . " - " . $kta->getClientOriginalName();
+            $kta->move($destinationPath, $ktaImage);
+            $data['kta'] = "$ktaImage";
+        }
         
         AjukanPanjarTabel::create($data);
 
