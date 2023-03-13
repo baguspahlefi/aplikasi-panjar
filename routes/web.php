@@ -44,7 +44,7 @@ Route::post('/admin/form', [App\Http\Controllers\Admin\HomeController::class, 's
 ->middleware(['auth','admin'])
 ->name('perkara.store');
 
-Route::match(['get','post'],'/admin/{id}', [App\Http\Controllers\Admin\HomeController::class, 'edit'])
+Route::match(['get','post'],'/admin/data-perkara/{id}', [App\Http\Controllers\Admin\HomeController::class, 'edit'])
 ->middleware(['auth','admin'])
 ->name('perkara.edit');
 
