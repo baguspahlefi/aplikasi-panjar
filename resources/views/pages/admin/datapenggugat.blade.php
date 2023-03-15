@@ -116,7 +116,7 @@
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <img width="100%" src="{{ url("storage/assets/gallery/{$item->ktp}") }}" alt="">
+                                                    <img width="100%" src="{{ url("storage_user/assets/gallery/{$item->ktp}") }}" alt="">
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -134,7 +134,7 @@
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <img width="100%" src="{{ url("storage/assets/gallery/{$item->kta}") }}" alt="">
+                                                    <img width="100%" src="{{ url("storage_user/assets/gallery/{$item->kta}") }}" alt="">
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
