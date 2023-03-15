@@ -83,11 +83,14 @@
                                         <td>{{ $item->no_rekening }}</td>
                                         <td>{{ $item->jenis_bank }}</td>
                                         <td> 
-                                            
-                                            <img src="{{ url("storage/assets/gallery/{$item->ktp}") }}" alt="" width="150" class="img-thumbnail" data-mdb-img="storage/assets/gallery/{{$item->ktp}}">
+                                            <a type="button"  data-bs-toggle="modal" data-bs-target="#modalDetailKtp">
+                                                <img src="{{ url("storage/assets/gallery/{$item->ktp}") }}" alt="" width="150" class="img-thumbnail" data-mdb-img="storage/assets/gallery/{{$item->ktp}}">
+                                            </a>    
                                         </td>
                                         <td>
-                                            <img src="{{ url("storage/assets/gallery/{$item->kta}") }}" alt="" width="150" class="img-thumbnail">
+                                            <a type="button" data-bs-toggle="modal" data-bs-target="#modalDetailKta">
+                                                <img src="{{ url("storage/assets/gallery/{$item->kta}") }}" alt="" width="150" class="img-thumbnail" data-mdb-img="storage/assets/gallery/{{$item->ktp}}">
+                                            </a>   
                                         </td>
                                         <td>
                                             <button type="button" class="btn btn-success my-2" data-bs-toggle="modal" data-bs-target="#exampleModal-{{$item->ajukan_panjar_id}}">
@@ -103,6 +106,42 @@
                                            
                                         </td>
                                     </tr>
+
+                                    <!-- Modal Detail KTP -->
+                                    <div class="modal fade" id="modalDetailKtp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Bukti Transfer</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <img width="100%" src="{{ url("storage/assets/gallery/{$item->ktp}") }}" alt="">
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Modal Detail KTP -->
+                                    <div class="modal fade" id="modalDetailKta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Bukti Transfer</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <img width="100%" src="{{ url("storage/assets/gallery/{$item->kta}") }}" alt="">
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
                                     <!-- Modal -->
                                     <div class="modal fade" id="exampleModal-{{$item->ajukan_panjar_id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
