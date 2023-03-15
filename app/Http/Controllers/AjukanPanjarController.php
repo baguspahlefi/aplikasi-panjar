@@ -37,14 +37,14 @@ class AjukanPanjarController extends Controller
         $data = $request->all();
 
         if ($ktp = $request->file('ktp')) {
-            $destinationPath = 'storage/assets/gallery';
+            $destinationPath = 'storage_user/assets/gallery';
             $ktpImage = uniqid() . " - " . $ktp->getClientOriginalName();
             $ktp->move($destinationPath, $ktpImage);
             $data['ktp'] = "$ktpImage";
         }
         
         if ($kta = $request->file('kta')) {
-            $destinationPath = 'storage/assets/gallery';
+            $destinationPath = 'storage_user/assets/gallery';
             $ktaImage = uniqid() . " - " . $kta->getClientOriginalName();
             $kta->move($destinationPath, $ktaImage);
             $data['kta'] = "$ktaImage";

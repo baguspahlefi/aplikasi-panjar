@@ -29,6 +29,10 @@ nav{
     width: 100%;
     z-index: 1;
 
+    .transparent-bg{
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
     .hero-container{
         margin-top: 20vh;
     }

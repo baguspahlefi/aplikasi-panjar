@@ -61,14 +61,14 @@ class DataPenggugatController extends Controller
             $ktp = $request->ktp;
             $record = AjukanPanjarTabel::findOrFail($id);
 
-            $file_path = 'storage/assets/gallery/'.$record->ktp;
+            $file_path = 'storage_user/assets/gallery/'.$record->ktp;
             //You can also check existance of the file in storage.
             if(AjukanPanjarTabel::exists($file_path)) {
                unlink($file_path); //delete from storage
                // Storage::delete($file_path); //Or you can do it as well
             }
             
-            $destinationPath = 'storage/assets/gallery';
+            $destinationPath = 'storage_user/assets/gallery';
             $ktpImage = uniqid() . " - " . $ktp->getClientOriginalName();
             $ktp->move($destinationPath, $ktpImage);
             $data['ktp'] = "$ktpImage";
@@ -79,13 +79,13 @@ class DataPenggugatController extends Controller
             $kta = $request->kta;
             $record = AjukanPanjarTabel::find($id);
 
-            $file_path = 'storage/assets/gallery/'.$record->kta;
+            $file_path = 'storage_user/assets/gallery/'.$record->kta;
             //You can also check existance of the file in storage.
             if(AjukanPanjarTabel::exists($file_path)) {
                unlink($file_path); //delete from storage
                // Storage::delete($file_path); //Or you can do it as well
             }
-            $destinationPath = 'storage/assets/gallery';
+            $destinationPath = 'storage_user/assets/gallery';
             $ktaImage = uniqid() . " - " . $kta->getClientOriginalName();
             $kta->move($destinationPath, $ktaImage);
             $data['kta'] = "$ktaImage";

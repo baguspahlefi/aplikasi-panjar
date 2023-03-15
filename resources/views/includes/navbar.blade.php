@@ -1,18 +1,18 @@
 <!-- Navbar  -->
-<nav class="navbar navbar-expand-lg ms-auto position-fixed w-100" style="background-color: #18C3FF" >
+<nav class="navbar navbar-expand-lg ms-auto position-fixed w-100" >
     <div class="container">
         <a class="navbar-brand" href="{{route('home')}}">
             <div class="d-flex">
-                <img src=" {{url('images/LOGO-removebg-preview.png')}} " alt="" width="60" srcset="">
+                <img src=" {{url('images/LOGO-removebg-preview.png')}} " alt="" width="40" srcset="">
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <h2>SIMPANTAUMULI POP</h2>
+                            <h3 class="text-dark">SIMPANTAUMULI POP</h3>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p style="font-size: 10px;">PENGADILAN TATA USAHA NEGARA BANDAR LAMPUNG</p>
+                            <p class="text-dark"style="font-size: 10px;">PENGADILAN TATA USAHA NEGARA BANDAR LAMPUNG</p>
                         </div>
                     </div>
                 </div>
@@ -36,14 +36,14 @@
                 <div class="navbar-nav justify-content-end flex-grow-1 ">
                     @guest
                         <a class="nav-link mx-2" aria-current="page" href=" {{route('home')}} ">Beranda</a>
-                        <a class="nav-link mx-2" href="#">Tentang</a>
+                        <a class="nav-link mx-2" href="#tentang-section">Tentang</a>
                         <a class="nav-link mx-2 nav-masuk " href="{{url('login')}}">Login</a>
                         <a class="nav-link nav-daftar mx-2" href="{{url('register')}}">Daftar</a>
                     @endguest
 
                     @auth
                     <a class="nav-link mx-2" aria-current="page" href=" {{route('home')}} ">Beranda</a>
-                    <a class="nav-link mx-2" href="#">Tentang</a>
+                    <a class="nav-link mx-2" href="#tentang-section">Tentang</a>
                     <form action="{{url('logout')}}" method="POST">
                         @csrf
                         <button class="nav-link text-white ms-2 btn btn-secondary" type="submit">

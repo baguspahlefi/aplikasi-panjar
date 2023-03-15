@@ -84,12 +84,12 @@
                                         <td>{{ $item->jenis_bank }}</td>
                                         <td> 
                                             <a type="button"  data-bs-toggle="modal" data-bs-target="#modalDetailKtp">
-                                                <img src="{{ url("storage/assets/gallery/{$item->ktp}") }}" alt="" width="150" class="img-thumbnail" data-mdb-img="storage/assets/gallery/{{$item->ktp}}">
+                                                <img src="{{ url("storage_user/assets/gallery/{$item->ktp}") }}" alt="" width="150" class="img-thumbnail" data-mdb-img="storage/assets/gallery/{{$item->ktp}}">
                                             </a>    
                                         </td>
                                         <td>
                                             <a type="button" data-bs-toggle="modal" data-bs-target="#modalDetailKta">
-                                                <img src="{{ url("storage/assets/gallery/{$item->kta}") }}" alt="" width="150" class="img-thumbnail" data-mdb-img="storage/assets/gallery/{{$item->ktp}}">
+                                                <img src="{{ url("storage_user/assets/gallery/{$item->kta}") }}" alt="" width="150" class="img-thumbnail" data-mdb-img="storage/assets/gallery/{{$item->ktp}}">
                                             </a>   
                                         </td>
                                         <td>
@@ -112,7 +112,7 @@
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Bukti Transfer</h1>
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Foto KTP</h1>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
@@ -130,7 +130,7 @@
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Bukti Transfer</h1>
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Foto KTA</h1>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
